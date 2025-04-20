@@ -114,24 +114,20 @@
       margin-top: 3rem;
     }
 
-    /* Dark/Light Mode Switch */
-    .mode-switch {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      cursor: pointer;
-      background-color: #ffc107; /* Gelb für den Umschalter */
-      color: #fff;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-      font-weight: bold;
+    /* Icons für GitHub und LinkedIn */
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
     }
-
-    /* Hover Effekte */
-    a.button:hover, .project:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    .social-icons a {
+      color: #fff;
+      font-size: 2rem;
+      transition: color 0.3s ease;
+    }
+    .social-icons a:hover {
+      color: #ffc107; /* Gelb für Hover-Effekte */
     }
 
     /* Medienanpassungen für Mobile */
@@ -147,8 +143,6 @@
   </style>
 </head>
 <body>
-  <!-- Dark/Light Mode Switch Button -->
-  <div class="mode-switch" onclick="toggleMode()">🌙</div>
 
   <header>
     <h1>Musawar Qaderi</h1>
@@ -210,23 +204,15 @@
 
   <footer>
     <p>&copy; 2025 Musawar Qaderi – Alle Rechte vorbehalten.</p>
+    <div class="social-icons">
+      <a href="https://github.com/MusawarQaderi" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/musawarqaderi/" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
   </footer>
 
-  <script>
-    // Dark/Light Mode Switch Funktion
-    function toggleMode() {
-      document.body.classList.toggle('light-mode');
-      let button = document.querySelector('.mode-switch');
-      if (document.body.classList.contains('light-mode')) {
-        button.textContent = '🌙';
-        document.body.style.backgroundColor = '#f1f1f1';
-        document.body.style.color = '#121212';
-      } else {
-        button.textContent = '☀️';
-        document.body.style.backgroundColor = '#121212';
-        document.body.style.color = '#f1f1f1';
-      }
-    }
-  </script>
 </body>
 </html>
