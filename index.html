@@ -1,159 +1,124 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <!-- Meta-Daten für Zeichencodierung und Viewport-Einstellungen -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <!-- Titel der Webseite -->
   <title>Musawar Qaderi</title>
-
-  <!-- Favicon für die Seite (Wird in der Tab-Leiste angezeigt) -->
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
-
-  <!-- CSS-Styles im Header -->
   <style>
-    /* Grundlegende Stile für den gesamten Body */
+    /* Grundlegende Stile */
     body {
-      margin: 0; /* Entfernt Standard-Abstände */
-      font-family: 'Poppins', sans-serif; /* Schriftart */
-      background-color: #121212; /* Dunkler Hintergrund */
-      color: #f1f1f1; /* Helle Schriftfarbe */
-      line-height: 1.6; /* Zeilenhöhe für bessere Lesbarkeit */
-      overflow-x: hidden; /* Verhindert horizontales Scrollen */
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #121212;
+      color: #f1f1f1;
+      line-height: 1.6;
+      overflow-x: hidden;
     }
-
-    /* Header-Bereich, der die Navigationsleiste und den Titel enthält */
     header {
-      background: #1e1e1e; /* Dunkler Hintergrund */
-      padding: 2rem; /* Abstand um den Header */
-      text-align: center; /* Textzentrierung */
-      position: sticky; /* Stellt sicher, dass der Header beim Scrollen oben bleibt */
-      top: 0; /* Fixiert den Header an der Oberseite */
-      z-index: 10; /* Z-index stellt sicher, dass der Header über anderen Elementen bleibt */
+      background: #1e1e1e;
+      padding: 2rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
-    
-    /* Stil für den Titel */
     h1 {
-      margin: 0; /* Entfernt den Standardabstand */
-      font-size: 2.5rem; /* Größe des Titels */
-      font-family: 'Merriweather', serif; /* Serifenschrift für ein elegantes Aussehen */
+      margin: 0;
+      font-size: 2.5rem;
+      font-family: 'Merriweather', serif;
     }
-
-    /* Navigation-Menü */
     nav {
-      margin-top: 1rem; /* Abstand zwischen Header und Navigation */
+      margin-top: 1rem;
     }
-
-    /* Navigation-Links */
     nav a {
-      color: #90caf9; /* Helles Blau */
-      text-decoration: none; /* Entfernt die Unterstreichung */
-      margin: 0 1rem; /* Abstand zwischen den Links */
-      font-size: 1.1rem; /* Schriftgröße für die Links */
+      color: #90caf9;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-size: 1.1rem;
     }
-
-    /* Hover-Effekt für Navigation-Links */
     nav a:hover {
-      color: #64b5f6; /* Helleres Blau beim Hover */
+      color: #64b5f6;
     }
-
-    /* Abschnitts-Stile für Inhalte wie 'Über mich', 'Projekte' etc. */
     section {
-      max-width: 800px; /* Maximale Breite der Inhalte */
-      margin: 2rem auto; /* Zentriert die Sektion */
-      padding: 0 1rem; /* Polsterung an den Seiten */
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
     }
-
-    /* Stil für die Unterüberschrift (h2) */
     h2 {
-      color: #64b5f6; /* Helles Blau für die Überschriften */
-      margin-bottom: 0.5rem; /* Abstand nach unten */
-      font-size: 2rem; /* Schriftgröße */
+      color: #64b5f6;
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
     }
-
-    /* Projekt-Boxen (individuelle Projekte) */
     .project {
-      background: #1a1f24; /* Dunkler Hintergrund für Projekte */
-      padding: 1rem; /* Polsterung innerhalb der Box */
-      margin-bottom: 1rem; /* Abstand zwischen den Projekten */
-      border-radius: 8px; /* Abgerundete Ecken */
-      transition: all 0.3s ease; /* Sanfte Übergangsanimation für den Hover-Effekt */
+      background: #1a1f24;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
     }
-
-    /* Hover-Effekt für Projekte: Vergrößern und Schatten hinzufügen */
     .project:hover {
-      transform: scale(1.05); /* Skaliert das Projekt bei Hover */
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Fügt einen Schatten hinzu */
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     }
-
-    /* Footer-Stile */
     footer {
-      text-align: center; /* Zentriert den Text */
-      padding: 2rem; /* Abstand um den Footer */
-      background: #1e1e1e; /* Dunkler Hintergrund */
-      color: #aaa; /* Helle Textfarbe */
+      text-align: center;
+      padding: 2rem;
+      background: #1e1e1e;
+      color: #aaa;
     }
-
-    /* Stil für Buttons */
     a.button {
-      display: inline-block; /* Macht den Link zu einem Block-Element */
-      padding: 0.5rem 1rem; /* Polsterung */
-      background: #64b5f6; /* Helles Blau */
-      color: #121212; /* Dunkle Schriftfarbe */
-      border-radius: 5px; /* Abgerundete Ecken */
-      text-decoration: none; /* Keine Unterstreichung */
-      margin-top: 1rem; /* Abstand zum nächsten Element */
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: #64b5f6;
+      color: #121212;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 1rem;
     }
 
     /* Ladeanimation */
     .loader {
-      position: fixed; /* Positioniert den Loader über der gesamten Seite */
+      position: fixed;
       top: 0;
       left: 0;
-      width: 100%; /* Deckt den gesamten Bildschirm ab */
+      width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.7); /* Dunkler Hintergrund mit Transparenz */
-      display: flex; /* Nutzt Flexbox, um den Loader zu zentrieren */
-      justify-content: center; /* Zentriert horizontal */
-      align-items: center; /* Zentriert vertikal */
-      z-index: 9999; /* Stellt sicher, dass der Loader oben bleibt */
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
     }
-
-    /* Spinner (drehende Animation) */
     .loader .spinner {
       width: 50px;
       height: 50px;
-      border: 5px solid #f1f1f1; /* Heller Rand */
-      border-top: 5px solid #64b5f6; /* Farbiger Oberrand */
-      border-radius: 50%; /* Macht den Spinner rund */
-      animation: spin 1s linear infinite; /* Definiert die Dreh-Animation */
+      border: 5px solid #f1f1f1;
+      border-top: 5px solid #64b5f6;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
     }
-
-    /* Animation für das Drehen des Spinners */
     @keyframes spin {
-      0% { transform: rotate(0deg); } /* Startwinkel */
-      100% { transform: rotate(360deg); } /* Endwinkel (komplette Drehung) */
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
 
-    /* Parallax-Effekt für Hintergrund */
+    /* Parallax-Effekt */
     .parallax {
-      background-image: url('path_to_background_image.jpg'); /* Hintergrundbild */
-      height: 100vh; /* Höhe des Bereichs */
-      background-attachment: fixed; /* Fixiert das Hintergrundbild */
-      background-position: center; /* Zentriert das Bild */
-      background-repeat: no-repeat; /* Verhindert das Wiederholen des Bildes */
-      background-size: cover; /* Deckt den gesamten Bereich ab */
+      background-image: url('path_to_background_image.jpg');
+      height: 100vh;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
   </style>
 </head>
 <body>
-  <!-- Ladeanimation (Spinner wird beim Laden angezeigt) -->
   <div class="loader">
     <div class="spinner"></div>
   </div>
 
-  <!-- Header mit Titel und Navigation -->
   <header>
     <h1>Musawar Qaderi</h1>
     <nav>
@@ -164,7 +129,6 @@
     </nav>
   </header>
 
-  <!-- Abschnitt 'Über mich' -->
   <section id="about">
     <h2>Über mich</h2>
     <p>
@@ -172,7 +136,6 @@
     </p>
   </section>
 
-  <!-- Abschnitt 'Projekte' -->
   <section id="projects">
     <h2>Projekte</h2>
     <div class="project">
@@ -185,7 +148,6 @@
     </div>
   </section>
 
-  <!-- Abschnitt 'Skills' -->
   <section id="skills">
     <h2>Skills</h2>
     <ul>
@@ -197,7 +159,6 @@
     </ul>
   </section>
 
-  <!-- Abschnitt 'Kontakt' -->
   <section id="contact">
     <h2>Kontakt</h2>
     <p>GitHub: <a href="https://github.com/MusawarQaderi" target="_blank">github.com/MusawarQaderi</a></p>
@@ -205,12 +166,10 @@
     <p>Mail: <em>musawar.qaderi@gmail.com</em></p>
   </section>
 
-  <!-- Footer mit Copyright-Hinweis -->
   <footer>
     <p>&copy; 2025 Musawar Qaderi – Alle Rechte vorbehalten.</p>
   </footer>
 
-  <!-- JavaScript für das Entfernen des Ladebildschirms nach 2 Sekunden -->
   <script>
     window.onload = () => {
       setTimeout(() => {
