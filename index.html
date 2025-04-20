@@ -3,7 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Musawar Qaderi</title>
+  <meta name="description" content="Portfolio von Musawar Qaderi, Fachinformatiker für Anwendungsentwicklung mit Java und Python Kenntnissen." />
+  <meta name="keywords" content="Musawar Qaderi, Fachinformatiker, Anwendungsentwicklung, Java, Python, Portfolio, Softwareentwicklung" />
+  <meta name="author" content="Musawar Qaderi" />
+  <meta property="og:title" content="Musawar Qaderi – Portfolio" />
+  <meta property="og:description" content="Portfolio von Musawar Qaderi, Fachinformatiker für Anwendungsentwicklung." />
+  <meta property="og:image" content="https://example.com/image.jpg" />
+  <meta property="og:url" content="https://github.com/MusawarQaderi" />
+  <meta property="og:type" content="website" />
+  <title>Musawar Qaderi – Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
@@ -76,6 +84,43 @@
     a.button:hover {
       background: #90caf9;
     }
+    /* Contact Form */
+    form {
+      background: #1e1e1e;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin: 0.5rem 0;
+      border: 1px solid #333;
+      border-radius: 5px;
+      background-color: #333;
+      color: #fff;
+    }
+    input[type="submit"] {
+      background-color: #64b5f6;
+      border: none;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #90caf9;
+    }
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      nav a {
+        font-size: 1rem;
+        margin: 0 0.5rem;
+      }
+      section {
+        padding: 0.5rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -93,6 +138,13 @@
     <h2>Über mich</h2>
     <p>
       Hi, ich bin Musa – angehender Fachinformatiker für Anwendungsentwicklung mit einem Hintergrund im Informatikstudium. In der Uni habe ich vor allem mit Java gearbeitet und Projekte mit Eclipse umgesetzt. Aktuell beschäftige ich mich intensiv mit Python und erweitere mein Know-how mit modernen Tools wie Visual Studio Code.
+    </p>
+    <p>
+      Du kannst mehr über mich auf meinen sozialen Netzwerken erfahren:
+      <ul>
+        <li><a href="https://github.com/MusawarQaderi" target="_blank">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/musawarqaderi" target="_blank">LinkedIn</a></li>
+      </ul>
     </p>
   </section>
 
@@ -121,8 +173,21 @@
 
   <section id="contact">
     <h2>Kontakt</h2>
-    <p>GitHub: <a href="https://github.com/MusawarQaderi" target="_blank">github.com/MusawarQaderi</a></p>
-    <p>Mail: <em>musawar.qaderi@gmail.com</em></p>
+    <p>Du kannst mich gerne über das Formular unten kontaktieren oder mir eine E-Mail an <strong>musawar.qaderi@gmail.com</strong> senden.</p>
+
+    <!-- Kontaktformular -->
+    <form action="mailto:musawar.qaderi@gmail.com" method="post" enctype="text/plain">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">E-Mail:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Nachricht:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <input type="submit" value="Absenden">
+    </form>
   </section>
 
   <footer>
