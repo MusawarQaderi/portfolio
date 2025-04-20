@@ -13,24 +13,29 @@
   <meta property="og:type" content="website" />
   <title>Musawar Qaderi – Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <style>
+    /* Globale Einstellungen */
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
       background-color: #121212;
       color: #f1f1f1;
       line-height: 1.6;
+      overflow-x: hidden;
     }
     header {
       background: #1e1e1e;
-      padding: 2rem;
+      padding: 3rem 2rem;
       text-align: center;
       border-bottom: 3px solid #64b5f6;
     }
     h1 {
       margin: 0;
-      font-size: 3rem;
+      font-size: 3.5rem;
       color: #64b5f6;
+      letter-spacing: 2px;
+      font-weight: 600;
     }
     nav {
       margin-top: 1rem;
@@ -38,92 +43,113 @@
     nav a {
       color: #90caf9;
       text-decoration: none;
-      margin: 0 1rem;
+      margin: 0 1.5rem;
       font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
     }
     nav a:hover {
       color: #64b5f6;
-      transition: 0.3s ease;
     }
+
+    /* Sektionen */
     section {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 1rem;
     }
     h2 {
       color: #64b5f6;
       margin-bottom: 0.5rem;
+      font-size: 2rem;
     }
+
+    /* Projekte */
     .project {
       background: #1e1e1e;
-      padding: 1rem;
+      padding: 1.5rem;
       margin-bottom: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: 0.3s ease;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
     }
     .project:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: #1e1e1e;
-      color: #aaa;
-    }
-    a.button {
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      background: #64b5f6;
-      color: #121212;
-      border-radius: 5px;
-      text-decoration: none;
-      margin-top: 1rem;
-    }
-    a.button:hover {
-      background: #90caf9;
-    }
-    /* Contact Form */
+
+    /* Kontaktformular */
     form {
       background: #1e1e1e;
-      padding: 1rem;
-      border-radius: 8px;
-      margin-top: 1rem;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     }
     input, textarea {
       width: 100%;
       padding: 0.8rem;
       margin: 0.5rem 0;
+      border-radius: 10px;
       border: 1px solid #333;
-      border-radius: 5px;
       background-color: #333;
       color: #fff;
+      font-size: 1rem;
     }
     input[type="submit"] {
       background-color: #64b5f6;
       border: none;
       cursor: pointer;
+      font-weight: 600;
     }
     input[type="submit"]:hover {
       background-color: #90caf9;
     }
-    /* Responsive Design */
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #1e1e1e;
+      color: #aaa;
+      margin-top: 3rem;
+    }
+
+    /* Dark/Light Mode Switch */
+    .mode-switch {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      background-color: #64b5f6;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      font-weight: bold;
+    }
+
+    /* Hover Effekte */
+    a.button:hover, .project:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Medienanpassungen für Mobile */
     @media screen and (max-width: 768px) {
       h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
       }
       nav a {
         font-size: 1rem;
         margin: 0 0.5rem;
       }
-      section {
-        padding: 0.5rem;
-      }
     }
   </style>
 </head>
 <body>
+  <!-- Dark/Light Mode Switch Button -->
+  <div class="mode-switch" onclick="toggleMode()">🌙</div>
+
   <header>
     <h1>Musawar Qaderi</h1>
     <nav>
@@ -138,13 +164,6 @@
     <h2>Über mich</h2>
     <p>
       Hi, ich bin Musa – angehender Fachinformatiker für Anwendungsentwicklung mit einem Hintergrund im Informatikstudium. In der Uni habe ich vor allem mit Java gearbeitet und Projekte mit Eclipse umgesetzt. Aktuell beschäftige ich mich intensiv mit Python und erweitere mein Know-how mit modernen Tools wie Visual Studio Code.
-    </p>
-    <p>
-      Du kannst mehr über mich auf meinen sozialen Netzwerken erfahren:
-      <ul>
-        <li><a href="https://github.com/MusawarQaderi" target="_blank">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/musawarqaderi" target="_blank">LinkedIn</a></li>
-      </ul>
     </p>
   </section>
 
@@ -175,7 +194,6 @@
     <h2>Kontakt</h2>
     <p>Du kannst mich gerne über das Formular unten kontaktieren oder mir eine E-Mail an <strong>musawar.qaderi@gmail.com</strong> senden.</p>
 
-    <!-- Kontaktformular -->
     <form action="mailto:musawar.qaderi@gmail.com" method="post" enctype="text/plain">
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" required>
@@ -193,5 +211,22 @@
   <footer>
     <p>&copy; 2025 Musawar Qaderi – Alle Rechte vorbehalten.</p>
   </footer>
+
+  <script>
+    // Dark/Light Mode Switch Funktion
+    function toggleMode() {
+      document.body.classList.toggle('light-mode');
+      let button = document.querySelector('.mode-switch');
+      if (document.body.classList.contains('light-mode')) {
+        button.textContent = '🌙';
+        document.body.style.backgroundColor = '#f1f1f1';
+        document.body.style.color = '#121212';
+      } else {
+        button.textContent = '☀️';
+        document.body.style.backgroundColor = '#121212';
+        document.body.style.color = '#f1f1f1';
+      }
+    }
+  </script>
 </body>
 </html>
