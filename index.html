@@ -1,14 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Musawar Qaderi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       background-color: #121212;
       color: #f1f1f1;
       line-height: 1.6;
@@ -17,10 +17,12 @@
       background: #1e1e1e;
       padding: 2rem;
       text-align: center;
+      border-bottom: 3px solid #64b5f6;
     }
     h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 3rem;
+      color: #64b5f6;
     }
     nav {
       margin-top: 1rem;
@@ -29,6 +31,11 @@
       color: #90caf9;
       text-decoration: none;
       margin: 0 1rem;
+      font-weight: 600;
+    }
+    nav a:hover {
+      color: #64b5f6;
+      transition: 0.3s ease;
     }
     section {
       max-width: 800px;
@@ -42,8 +49,14 @@
     .project {
       background: #1e1e1e;
       padding: 1rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: 0.3s ease;
+    }
+    .project:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
     }
     footer {
       text-align: center;
@@ -59,6 +72,9 @@
       border-radius: 5px;
       text-decoration: none;
       margin-top: 1rem;
+    }
+    a.button:hover {
+      background: #90caf9;
     }
   </style>
 </head>
