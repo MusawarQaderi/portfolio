@@ -1,149 +1,159 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+  <!-- Meta-Daten für Zeichencodierung und Viewport-Einstellungen -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio von Musawar Qaderi, Fachinformatiker für Anwendungsentwicklung mit Java und Python Kenntnissen." />
-  <meta name="keywords" content="Musawar Qaderi, Fachinformatiker, Anwendungsentwicklung, Java, Python, Portfolio, Softwareentwicklung" />
-  <meta name="author" content="Musawar Qaderi" />
-  <meta property="og:title" content="Musawar Qaderi – Portfolio" />
-  <meta property="og:description" content="Portfolio von Musawar Qaderi, Fachinformatiker für Anwendungsentwicklung." />
-  <meta property="og:image" content="https://example.com/image.jpg" />
-  <meta property="og:url" content="https://github.com/MusawarQaderi" />
-  <meta property="og:type" content="website" />
-  <title>Musawar Qaderi – Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  
+  <!-- Titel der Webseite -->
+  <title>Musawar Qaderi</title>
+
+  <!-- Favicon für die Seite (Wird in der Tab-Leiste angezeigt) -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- CSS-Styles im Header -->
   <style>
-    /* Globale Einstellungen */
+    /* Grundlegende Stile für den gesamten Body */
     body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #1b1f23; /* Dunkelgrau für den Hintergrund */
-      color: #e5e5e5; /* Helles Grau für Text */
-      line-height: 1.6;
-      overflow-x: hidden;
+      margin: 0; /* Entfernt Standard-Abstände */
+      font-family: 'Poppins', sans-serif; /* Schriftart */
+      background-color: #121212; /* Dunkler Hintergrund */
+      color: #f1f1f1; /* Helle Schriftfarbe */
+      line-height: 1.6; /* Zeilenhöhe für bessere Lesbarkeit */
+      overflow-x: hidden; /* Verhindert horizontales Scrollen */
     }
+
+    /* Header-Bereich, der die Navigationsleiste und den Titel enthält */
     header {
-      background: #0d6efd; /* Kräftiges Blau für den Header */
-      padding: 3rem 2rem;
-      text-align: center;
-      border-bottom: 3px solid #ffc107; /* Gelb für den unteren Rand */
+      background: #1e1e1e; /* Dunkler Hintergrund */
+      padding: 2rem; /* Abstand um den Header */
+      text-align: center; /* Textzentrierung */
+      position: sticky; /* Stellt sicher, dass der Header beim Scrollen oben bleibt */
+      top: 0; /* Fixiert den Header an der Oberseite */
+      z-index: 10; /* Z-index stellt sicher, dass der Header über anderen Elementen bleibt */
     }
+    
+    /* Stil für den Titel */
     h1 {
-      margin: 0;
-      font-size: 3.5rem;
-      color: #fff; /* Weißer Text für den Header */
-      letter-spacing: 2px;
-      font-weight: 600;
+      margin: 0; /* Entfernt den Standardabstand */
+      font-size: 2.5rem; /* Größe des Titels */
+      font-family: 'Merriweather', serif; /* Serifenschrift für ein elegantes Aussehen */
     }
+
+    /* Navigation-Menü */
     nav {
-      margin-top: 1rem;
+      margin-top: 1rem; /* Abstand zwischen Header und Navigation */
     }
+
+    /* Navigation-Links */
     nav a {
-      color: #f0f8ff; /* Sehr helles Blau für Links */
-      text-decoration: none;
-      margin: 0 1.5rem;
-      font-weight: 600;
-      font-size: 1.1rem;
-      transition: color 0.3s ease;
+      color: #90caf9; /* Helles Blau */
+      text-decoration: none; /* Entfernt die Unterstreichung */
+      margin: 0 1rem; /* Abstand zwischen den Links */
+      font-size: 1.1rem; /* Schriftgröße für die Links */
     }
+
+    /* Hover-Effekt für Navigation-Links */
     nav a:hover {
-      color: #ffc107; /* Gelb für Hover-Effekte */
+      color: #64b5f6; /* Helleres Blau beim Hover */
     }
 
-    /* Sektionen */
+    /* Abschnitts-Stile für Inhalte wie 'Über mich', 'Projekte' etc. */
     section {
-      max-width: 1200px;
-      margin: 3rem auto;
-      padding: 1rem;
+      max-width: 800px; /* Maximale Breite der Inhalte */
+      margin: 2rem auto; /* Zentriert die Sektion */
+      padding: 0 1rem; /* Polsterung an den Seiten */
     }
+
+    /* Stil für die Unterüberschrift (h2) */
     h2 {
-      color: #ffc107; /* Gelb für Subtitel */
-      margin-bottom: 0.5rem;
-      font-size: 2rem;
+      color: #64b5f6; /* Helles Blau für die Überschriften */
+      margin-bottom: 0.5rem; /* Abstand nach unten */
+      font-size: 2rem; /* Schriftgröße */
     }
 
-    /* Projekte */
+    /* Projekt-Boxen (individuelle Projekte) */
     .project {
-      background: #2a2f37; /* Dunkler Hintergrund für Projekte */
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
+      background: #1a1f24; /* Dunkler Hintergrund für Projekte */
+      padding: 1rem; /* Polsterung innerhalb der Box */
+      margin-bottom: 1rem; /* Abstand zwischen den Projekten */
+      border-radius: 8px; /* Abgerundete Ecken */
+      transition: all 0.3s ease; /* Sanfte Übergangsanimation für den Hover-Effekt */
     }
+
+    /* Hover-Effekt für Projekte: Vergrößern und Schatten hinzufügen */
     .project:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      transform: scale(1.05); /* Skaliert das Projekt bei Hover */
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Fügt einen Schatten hinzu */
     }
 
-    /* Kontaktformular */
-    form {
-      background: #2a2f37; /* Dunkler Hintergrund für Formulare */
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    }
-    input, textarea {
-      width: 100%;
-      padding: 0.8rem;
-      margin: 0.5rem 0;
-      border-radius: 10px;
-      border: 1px solid #444;
-      background-color: #333;
-      color: #fff;
-      font-size: 1rem;
-    }
-    input[type="submit"] {
-      background-color: #0d6efd; /* Kräftiges Blau für den Submit-Button */
-      border: none;
-      cursor: pointer;
-      font-weight: 600;
-    }
-    input[type="submit"]:hover {
-      background-color: #0056b3; /* Dunkleres Blau für Hover */
-    }
-
-    /* Footer */
+    /* Footer-Stile */
     footer {
-      text-align: center;
-      padding: 2rem;
-      background: #0d6efd; /* Kräftiges Blau für den Footer */
-      color: #fff;
-      margin-top: 3rem;
+      text-align: center; /* Zentriert den Text */
+      padding: 2rem; /* Abstand um den Footer */
+      background: #1e1e1e; /* Dunkler Hintergrund */
+      color: #aaa; /* Helle Textfarbe */
     }
 
-    /* Icons für GitHub und LinkedIn */
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    .social-icons a {
-      color: #fff;
-      font-size: 2rem;
-      transition: color 0.3s ease;
-    }
-    .social-icons a:hover {
-      color: #ffc107; /* Gelb für Hover-Effekte */
+    /* Stil für Buttons */
+    a.button {
+      display: inline-block; /* Macht den Link zu einem Block-Element */
+      padding: 0.5rem 1rem; /* Polsterung */
+      background: #64b5f6; /* Helles Blau */
+      color: #121212; /* Dunkle Schriftfarbe */
+      border-radius: 5px; /* Abgerundete Ecken */
+      text-decoration: none; /* Keine Unterstreichung */
+      margin-top: 1rem; /* Abstand zum nächsten Element */
     }
 
-    /* Medienanpassungen für Mobile */
-    @media screen and (max-width: 768px) {
-      h1 {
-        font-size: 2.5rem;
-      }
-      nav a {
-        font-size: 1rem;
-        margin: 0 0.5rem;
-      }
+    /* Ladeanimation */
+    .loader {
+      position: fixed; /* Positioniert den Loader über der gesamten Seite */
+      top: 0;
+      left: 0;
+      width: 100%; /* Deckt den gesamten Bildschirm ab */
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7); /* Dunkler Hintergrund mit Transparenz */
+      display: flex; /* Nutzt Flexbox, um den Loader zu zentrieren */
+      justify-content: center; /* Zentriert horizontal */
+      align-items: center; /* Zentriert vertikal */
+      z-index: 9999; /* Stellt sicher, dass der Loader oben bleibt */
+    }
+
+    /* Spinner (drehende Animation) */
+    .loader .spinner {
+      width: 50px;
+      height: 50px;
+      border: 5px solid #f1f1f1; /* Heller Rand */
+      border-top: 5px solid #64b5f6; /* Farbiger Oberrand */
+      border-radius: 50%; /* Macht den Spinner rund */
+      animation: spin 1s linear infinite; /* Definiert die Dreh-Animation */
+    }
+
+    /* Animation für das Drehen des Spinners */
+    @keyframes spin {
+      0% { transform: rotate(0deg); } /* Startwinkel */
+      100% { transform: rotate(360deg); } /* Endwinkel (komplette Drehung) */
+    }
+
+    /* Parallax-Effekt für Hintergrund */
+    .parallax {
+      background-image: url('path_to_background_image.jpg'); /* Hintergrundbild */
+      height: 100vh; /* Höhe des Bereichs */
+      background-attachment: fixed; /* Fixiert das Hintergrundbild */
+      background-position: center; /* Zentriert das Bild */
+      background-repeat: no-repeat; /* Verhindert das Wiederholen des Bildes */
+      background-size: cover; /* Deckt den gesamten Bereich ab */
     }
   </style>
 </head>
 <body>
+  <!-- Ladeanimation (Spinner wird beim Laden angezeigt) -->
+  <div class="loader">
+    <div class="spinner"></div>
+  </div>
 
+  <!-- Header mit Titel und Navigation -->
   <header>
     <h1>Musawar Qaderi</h1>
     <nav>
@@ -154,6 +164,7 @@
     </nav>
   </header>
 
+  <!-- Abschnitt 'Über mich' -->
   <section id="about">
     <h2>Über mich</h2>
     <p>
@@ -161,6 +172,7 @@
     </p>
   </section>
 
+  <!-- Abschnitt 'Projekte' -->
   <section id="projects">
     <h2>Projekte</h2>
     <div class="project">
@@ -173,6 +185,7 @@
     </div>
   </section>
 
+  <!-- Abschnitt 'Skills' -->
   <section id="skills">
     <h2>Skills</h2>
     <ul>
@@ -184,35 +197,26 @@
     </ul>
   </section>
 
+  <!-- Abschnitt 'Kontakt' -->
   <section id="contact">
     <h2>Kontakt</h2>
-    <p>Du kannst mich gerne über das Formular unten kontaktieren oder mir eine E-Mail an <strong>musawar.qaderi@gmail.com</strong> senden.</p>
-
-    <form action="mailto:musawar.qaderi@gmail.com" method="post" enctype="text/plain">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">E-Mail:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">Nachricht:</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
-
-      <input type="submit" value="Absenden">
-    </form>
+    <p>GitHub: <a href="https://github.com/MusawarQaderi" target="_blank">github.com/MusawarQaderi</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/musawarqaderi/" target="_blank">linkedin.com/in/musawarqaderi</a></p>
+    <p>Mail: <em>musawar.qaderi@gmail.com</em></p>
   </section>
 
+  <!-- Footer mit Copyright-Hinweis -->
   <footer>
     <p>&copy; 2025 Musawar Qaderi – Alle Rechte vorbehalten.</p>
-    <div class="social-icons">
-      <a href="https://github.com/MusawarQaderi" target="_blank" aria-label="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/musawarqaderi/" target="_blank" aria-label="LinkedIn">
-        <i class="fab fa-linkedin"></i>
-      </a>
-    </div>
   </footer>
 
+  <!-- JavaScript für das Entfernen des Ladebildschirms nach 2 Sekunden -->
+  <script>
+    window.onload = () => {
+      setTimeout(() => {
+        document.querySelector('.loader').style.display = 'none';
+      }, 2000); // Entfernt den Loader nach 2 Sekunden
+    };
+  </script>
 </body>
 </html>
