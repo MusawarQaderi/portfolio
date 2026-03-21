@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { TerminalHeader } from '../components/TerminalHeader';
 import { Typewriter } from '../components/Typewriter';
-import { Mail, MapPin, Phone, Send, Github, Linkedin, Twitter, ExternalLink, CheckCircle } from 'lucide-react';
+import { Mail, MapPin, Phone, Send, Github, Linkedin, Instagram, ExternalLink, CheckCircle } from 'lucide-react';
 import { CONTACT } from '../data/portfolio';
 
 export const Contact = () => {
@@ -140,9 +140,9 @@ export const Contact = () => {
       color: 'hover:text-blue-500',
     },
     {
-      name: 'Twitter',
-      url: CONTACT.social.twitter,
-      icon: Twitter,
+      name: 'Instagram',
+      url: CONTACT.social.instagram,
+      icon: Instagram,
       color: 'hover:text-blue-400',
     },
   ];
