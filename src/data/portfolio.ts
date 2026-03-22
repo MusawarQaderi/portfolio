@@ -56,7 +56,6 @@ export const SKILLS_BY_CATEGORY = {
   networking: SKILLS.filter(skill => skill.category === 'networking'),
   database: SKILLS.filter(skill => skill.category === 'database'),
 };
-
 export const PROJECTS_BY_CATEGORY = {
   all: PROJECTS,
   devops: PROJECTS.filter(project => project.category === 'devops'),
