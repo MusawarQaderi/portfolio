@@ -2,10 +2,6 @@
 
 Ultra-modern portfolio website for DevOps/Cloud Engineers featuring an advanced cyber terminal aesthetic with interactive blog and comprehensive case studies.
 
-## 🌟 Live Demo
-
-**[View Live Website →](https://neeraj-devops.vercel.app)**
-
 ## ✨ Enhanced Features
 
 ### 🎯 **Core Portfolio**
@@ -103,7 +99,7 @@ The project is configured for seamless deployment on Vercel:
 
 ### **Automatic Deployment**
 - Changes pushed to `main` branch trigger automatic builds
-- Deployment status available at: [Vercel Dashboard](https://vercel.com/neerajnakka/devops-portfolio)
+- Deployment status available at: ((https://vercel.com/musawarqaderis-projects/portfolio/))
 - Custom domain support included
 
 ### **Manual Deployment**
@@ -192,12 +188,5 @@ MIT License - feel free to use this template for your own portfolio!
 
 This portfolio showcases DevOps and Cloud Engineering expertise with modern web technologies. Built with a focus on performance, accessibility, and user experience.
 
-## 🔗 Links
-
-- **Live Website**: [https://neeraj-devops.vercel.app](https://neeraj-devops.vercel.app)
-- **GitHub Repository**: [https://github.com/neerajnakka/devops-portfolio](https://github.com/neerajnakka/devops-portfolio)
-- **Personal GitHub**: [https://github.com/neerajnakka](https://github.com/neerajnakka)
-
----
 
 *Built with ❤️ using React, TypeScript, and modern web technologies*
