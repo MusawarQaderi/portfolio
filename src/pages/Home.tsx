@@ -7,10 +7,10 @@ import { HERO_CONTENT, SKILLS, PROJECTS } from '../data/portfolio';
 
 export const Home = () => {
   const stats = [
-    { label: 'Status', value: 'In Ausbildung' },
-    { label: 'Fokus', value: 'Cloud / DevOps' },
-    { label: 'Lernstack', value: 'Python, AWS, Docker' },
-    { label: 'Ziel', value: 'Cloud- & DevOps-Engineer' },
+    { label: 'Jahre Erfahrung', value: '1+' },
+    { label: 'Cloud Plattformen', value: '3' },
+    { label: 'Projekte', value: '6' },
+    { label: 'Lernstack', value: '11' },
   ];
 
   const featuredSkills = SKILLS.slice(0, 6);
