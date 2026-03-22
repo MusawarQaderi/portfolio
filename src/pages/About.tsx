@@ -6,7 +6,7 @@ import { Calendar, MapPin, Code, Zap } from 'lucide-react';
 export const About = () => {
   const timeline = [
     {
-      year: '2026 - Present',
+      year: '2026 - heute',
       title: 'Umschulung - Fachinformatiker für Systemintegration',
       company: 'CBM Projektmanagement GmbH',
       description:
