@@ -133,65 +133,29 @@ export const About = () => {
             </div>
           </div>
         </div>
+
+        <div className="bg-bg-elevated border border-neutral-700 rounded-xl p-6">
+          <h3 className="font-mono text-primary-500 font-semibold mb-4 text-lg">
+            Specializations
+          </h3>
+          <div className="flex flex-wrap gap-2">
+            {['Cloud Architecture', 'CI/CD Pipelines', 'Infrastructure as Code', 'Container Orchestration', 'Microservices'].map((skill) => (
+              <span
+                key={skill}
+                className="px-3 py-1 bg-neutral-800 text-neutral-200 text-sm rounded-md border border-neutral-700 hover:border-primary-500/50 transition-colors"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
       </motion.div>
     </div>
   </div>
 </section>
 
-           {/* Quick Stats */}
-<motion.div
-  initial={{ opacity: 0, x: 50 }}
-  whileInView={{ opacity: 1, x: 0 }}
-  transition={{ duration: 0.6, delay: 0.2 }}
-  viewport={{ once: true }}
-  className="lg:col-span-5 space-y-6"
->
-  <div className="bg-bg-elevated border border-neutral-700 rounded-xl p-6">
-    <h3 className="font-mono text-primary-500 font-semibold mb-4 text-lg">
-      Quick Stats
-    </h3>
-    <div className="space-y-4">
-      <div className="flex items-center justify-between">
-        <span className="text-neutral-400">Status</span>
-        <span className="text-primary-500 font-mono">In Ausbildung</span>
-      </div>
-      <div className="flex items-center justify-between">
-        <span className="text-neutral-400">Fokus</span>
-        <span className="text-primary-500 font-mono">Cloud / DevOps</span>
-      </div>
-      <div className="flex items-center justify-between">
-        <span className="text-neutral-400">Lernstack</span>
-        <span className="text-primary-500 font-mono">Python, AWS, Docker</span>
-      </div>
-      <div className="flex items-center justify-between">
-        <span className="text-neutral-400">Ziel</span>
-        <span className="text-primary-500 font-mono">Cloud Engineer</span>
-      </div>
-    </div>
-  </div>
-</motion.div>
-              <div className="bg-bg-elevated border border-neutral-700 rounded-xl p-6">
-                <h3 className="font-mono text-primary-500 font-semibold mb-4 text-lg">
-                  Specializations
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {['Cloud Architecture', 'CI/CD Pipelines', 'Infrastructure as Code', 'Container Orchestration', 'Microservices'].map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-3 py-1 bg-neutral-800 text-neutral-200 text-sm rounded-md border border-neutral-700 hover:border-primary-500/50 transition-colors"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
       {/* Timeline Section */}
-      <section className="py-24 bg-bg-surface/30">;
+      <section className="py-24 bg-bg-surface/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -251,7 +215,7 @@ export const About = () => {
       </section>
 
       {/* Philosophy Section */}
-      <section className="py-24">;
+      <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
