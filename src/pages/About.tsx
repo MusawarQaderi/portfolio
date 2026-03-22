@@ -6,38 +6,38 @@ import { Calendar, MapPin, Code, Zap } from 'lucide-react';
 export const About = () => {
   const timeline = [
     {
-      year: '2023 - Present',
-      title: 'Freelance DevOps & Cloud Engineer',
-      company: 'Self-Employed',
+      year: '2026 - Present',
+      title: 'Umschulung - Fachinformatiker für Systemintegration',
+      company: 'CBM Projektmanagement GmbH',
       description:
-        'Working on freelance projects focusing on cloud automation, CI/CD, and container orchestration using AWS, Docker, and Kubernetes.',
+        'Praxisorientierter Aufbau von Fähigkeiten im Bereich Cloud und DevOps mit Fokus auf Automatisierung, Deployment und Cloud-Infrastruktur. Arbeit mit Python, AWS, Docker sowie Grundlagen in CI/CD und Linux.',
       icon: Code,},
     {
-      year: '2019 - 2023',
-      title: 'Computer Science Graduate',
-      company: 'CVR College Of Engineering',
-      description: 'Bachelor\'s degree with focus on software engineering and cloud computing.',
+      year: '2023 - 2025',
+      title: 'Studium - Informatik',
+      company: 'Universität Hamburg',
+      description: 'Grundlagen in Informatik, Softwareentwicklung und IT-Systemen. Anschließend Fokus auf praxisorientierte Ausbildung im Bereich Cloud und DevOps.',
       icon: Calendar,
     },
   ];
 
   const philosophyPoints = [
-    {
-      icon: Zap,
-      title: 'Automation First',
-      description: 'Every manual process should be automated, every deployment should be reproducible.',
-    },
-    {
-      icon: Code,
-      title: 'Infrastructure as Code',
-      description: 'Treat infrastructure with the same discipline as application code.',
-    },
-    {
-      icon: MapPin,
-      title: 'Cloud Native',
-      description: 'Build for the cloud from day one, embrace containerization and orchestration.',
-    },
-  ];
+  {
+    icon: Zap,
+    title: 'Praxisorientiertes Lernen',
+    description: 'Ich entwickle meine Fähigkeiten durch reale Projekte in Cloud, DevOps und Automatisierung.',
+  },
+  {
+    icon: Code,
+    title: 'Automatisierung & Deployment',
+    description: 'Ich lege Wert darauf, Prozesse zu automatisieren und Anwendungen strukturiert und reproduzierbar zu deployen.',
+  },
+  {
+    icon: MapPin,
+    title: 'Cloud-Infrastruktur',
+    description: 'Ich fokussiere mich auf den Aufbau und das Verständnis moderner Cloud-Systeme und Infrastruktur.',
+  },
+];
 
   return (
     <div className="min-h-screen bg-bg-page">
@@ -47,84 +47,89 @@ export const About = () => {
         description="Displaying professional background and technical philosophy"
       />
 
-      {/* Bio Section */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-12 gap-12 items-start">
-            {/* Bio Text */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="lg:col-span-7 space-y-8"
-            >
-              <div className="bg-bg-surface border border-neutral-700 rounded-xl p-8 shadow-card">
-                <div className="font-mono text-lg mb-6">
-                  <span className="text-accent-500">$</span>
-                  <span className="text-primary-500"> cat</span>
-                  <span className="text-neutral-400"> bio.txt</span>
-                </div>
-                <div className="space-y-4 text-neutral-200 leading-relaxed">
-                  <Typewriter
-                    text="Hello, I'm Neeraj Chandra Nakka, and I turn code into production reality."
-                    delay={30}
-                    className="text-primary-500 font-semibold block mb-4"
-                  />
-                  <p>
-                    I design, automate, and deploy systems that turn code into production-grade reality. 
-                    My journey began with full-stack development—building web apps with Java, React, and Node.js.
-                  </p>
-                  <p>
-                    Over time, that foundation evolved into a passion for DevOps and Cloud Engineering, 
-                    where I now focus on crafting scalable infrastructure, clean CI/CD pipelines, and resilient deployments.
-                  </p>
-                  <p>
-                    I work across AWS and Azure, orchestrate containers with Docker and Kubernetes, 
-                    and define infrastructure with Terraform and automation scripts. Behind the command line, 
-                    I'm equally comfortable in version control and workflow automation, using Git, GitHub, 
-                    and GitLab CI/CD to bridge collaboration and delivery.
-                  </p>
-                  <p className="text-primary-500 font-medium">
-                    For me, DevOps isn't just about speed—it's about precision, repeatability, 
-                    and creating systems that empower developers to ship confidently and innovate faster.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
+    {/* Bio Section */}
+<section className="py-24">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid lg:grid-cols-12 gap-12 items-start">
+      {/* Bio Text */}
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="lg:col-span-7 space-y-8"
+      >
+        <div className="bg-bg-surface border border-neutral-700 rounded-xl p-8 shadow-card">
+          <div className="font-mono text-lg mb-6">
+            <span className="text-accent-500">$</span>
+            <span className="text-primary-500"> cat</span>
+            <span className="text-neutral-400"> bio.txt</span>
+          </div>
 
-            {/* Quick Stats */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="lg:col-span-5 space-y-6"
-            >
-              <div className="bg-bg-elevated border border-neutral-700 rounded-xl p-6">
-                <h3 className="font-mono text-primary-500 font-semibold mb-4 text-lg">
-                  Quick Stats
-                </h3>
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <span className="text-neutral-400">Experience</span>
-                    <span className="text-primary-500 font-mono">1+ years</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-neutral-400">Cloud Platforms</span>
-                    <span className="text-primary-500 font-mono">AWS, Azure</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-neutral-400">Projects</span>
-                    <span className="text-primary-500 font-mono">7+ deployed</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-neutral-400">Technologies</span>
-                    <span className="text-primary-500 font-mono">19+ mastered</span>
-                  </div>
-                </div>
-              </div>
+          <div className="space-y-4 text-neutral-200 leading-relaxed">
+            <Typewriter
+              text="Hallo, ich bin Musawar Qaderi und entwickle mich gezielt im Bereich Cloud und DevOps."
+              delay={30}
+              className="text-primary-500 font-semibold block mb-4"
+            />
 
+            <p>
+              Mein Weg in die IT begann mit dem Interesse an Systemen und Software,
+              mit dem klaren Ziel, mich auf Cloud und DevOps zu spezialisieren.
+            </p>
+
+            <p>
+              Aktuell mache ich eine Umschulung zum Fachinformatiker und baue parallel
+              ein praxisorientiertes Skillset in den Bereichen Cloud-Infrastruktur,
+              Automatisierung und Deployment auf.
+            </p>
+
+            <p>
+              Ich arbeite mit Technologien wie Python, AWS und Docker und beschäftige mich
+              mit Linux, CI/CD-Prozessen und modernen DevOps-Tools, um Anwendungen effizient
+              und reproduzierbar in die Cloud zu bringen.
+            </p>
+
+            <p className="text-primary-500 font-medium">
+              Mein Fokus liegt darauf, reale Projekte umzusetzen, Prozesse zu automatisieren
+              und Schritt für Schritt skalierbare Cloud-Systeme aufzubauen.
+            </p>
+          </div>
+        </div>
+      </motion.div>
+
+           {/* Quick Stats */}
+<motion.div
+  initial={{ opacity: 0, x: 50 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.6, delay: 0.2 }}
+  viewport={{ once: true }}
+  className="lg:col-span-5 space-y-6"
+>
+  <div className="bg-bg-elevated border border-neutral-700 rounded-xl p-6">
+    <h3 className="font-mono text-primary-500 font-semibold mb-4 text-lg">
+      Quick Stats
+    </h3>
+    <div className="space-y-4">
+      <div className="flex items-center justify-between">
+        <span className="text-neutral-400">Status</span>
+        <span className="text-primary-500 font-mono">In Ausbildung</span>
+      </div>
+      <div className="flex items-center justify-between">
+        <span className="text-neutral-400">Fokus</span>
+        <span className="text-primary-500 font-mono">Cloud / DevOps</span>
+      </div>
+      <div className="flex items-center justify-between">
+        <span className="text-neutral-400">Lernstack</span>
+        <span className="text-primary-500 font-mono">Python, AWS, Docker</span>
+      </div>
+      <div className="flex items-center justify-between">
+        <span className="text-neutral-400">Ziel</span>
+        <span className="text-primary-500 font-mono">Cloud Engineer</span>
+      </div>
+    </div>
+  </div>
+</motion.div>
               <div className="bg-bg-elevated border border-neutral-700 rounded-xl p-6">
                 <h3 className="font-mono text-primary-500 font-semibold mb-4 text-lg">
                   Specializations
