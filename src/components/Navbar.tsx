@@ -29,7 +29,7 @@ export const Navbar = () => {
               <div className="text-primary-500 font-mono font-bold text-xl tracking-wide">
                 <span className="text-accent-500">&gt;</span>
                 <span className="group-hover:text-primary-500 transition-colors duration-200">
-                  _
+                  Musawar Qaderi
                 </span>
               </div>
             </Link>
