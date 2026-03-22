@@ -37,7 +37,7 @@ export const PROJECTS = [
 
 export const CONTACT = {
   address: 'Hamburg, Deutschland',
-  telephone: '+49 176 XXXXXXXX',
+  phoneNo: '+49 176 XXXXXXXX',
   email: 'musawar.qaderi@gmail.com',
   social: {
     github: 'https://github.com/MusawarQaderi',
