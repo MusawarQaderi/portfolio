@@ -68,7 +68,7 @@ export const About = () => {
 
           <div className="space-y-4 text-neutral-200 leading-relaxed">
             <Typewriter
-              text="Hallo, ich bin [Dein Name] und entwickle mich gezielt im Bereich Cloud und DevOps."
+              text="Hallo, ich bin Musawar Qaderi und entwickle mich gezielt im Bereich Cloud und DevOps."
               delay={30}
               className="text-primary-500 font-semibold block mb-4"
             />
