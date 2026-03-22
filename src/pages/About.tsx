@@ -108,7 +108,7 @@ export const About = () => {
       >
         <div className="bg-bg-elevated border border-neutral-700 rounded-xl p-6">
           <h3 className="font-mono text-primary-500 font-semibold mb-4 text-lg">
-            Quick Stats
+            Profilübersicht
           </h3>
 
           <div className="space-y-4">
@@ -136,7 +136,7 @@ export const About = () => {
 
         <div className="bg-bg-elevated border border-neutral-700 rounded-xl p-6">
           <h3 className="font-mono text-primary-500 font-semibold mb-4 text-lg">
-            Specializations
+            Schwerpunkte
           </h3>
           <div className="flex flex-wrap gap-2">
             {['Cloud Architecture', 'CI/CD Pipelines', 'Infrastructure as Code', 'Container Orchestration', 'Microservices'].map((skill) => (
@@ -165,10 +165,10 @@ export const About = () => {
             className="text-center mb-16"
           >
             <h2 className="font-mono text-3xl md:text-4xl font-bold text-primary-500 mb-4">
-              Career Timeline
+              Werdegang
             </h2>
             <p className="text-neutral-400 max-w-2xl mx-auto">
-              My journey from full-stack development to DevOps engineering
+              Mein Weg in Richtung Cloud, DevOps und moderne IT-Infrastruktur
             </p>
           </motion.div>
 
@@ -225,10 +225,10 @@ export const About = () => {
             className="text-center mb-16"
           >
             <h2 className="font-mono text-3xl md:text-4xl font-bold text-primary-500 mb-4">
-              Tech Philosophy
+              Arbeitsweise
             </h2>
             <p className="text-neutral-400 max-w-2xl mx-auto">
-              Core principles that guide my approach to software engineering and DevOps
+              Grundprinzipien, nach denen ich lerne, arbeite und technische Lösungen entwickle
             </p>
           </motion.div>
 
