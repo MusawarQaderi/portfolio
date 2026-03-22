@@ -9,8 +9,8 @@ export const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
-    message: '',
+    thema: '',
+    nachricht: '',
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -20,23 +20,23 @@ export const Contact = () => {
     const newErrors: Record<string, string> = {};
 
     if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
+      newErrors.name = 'Name ist erforderlich';
     }
 
     if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
+      newErrors.email = 'Email ist erforderlich';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email';
+      newErrors.email = 'Bitte gebe eine gültige E-Mail an';
     }
 
-    if (!formData.subject.trim()) {
-      newErrors.subject = 'Subject is required';
+    if (!formData.thema.trim()) {
+      newErrors.thema = 'Thema ist erforderlich';
     }
 
-    if (!formData.message.trim()) {
-      newErrors.message = 'Message is required';
-    } else if (formData.message.trim().length < 10) {
-      newErrors.message = 'Message must be at least 10 characters';
+    if (!formData.nachricht.trim()) {
+      newErrors.nachricht = 'Nachricht ist erforderlich';
+    } else if (formData.nachricht.trim().length < 10) {
+      newErrors.nachricht = 'Nachricht muss eine Mindestlänge von 10 Zeichen haben';
     }
 
     setErrors(newErrors);
@@ -58,8 +58,8 @@ export const Contact = () => {
       formDataToSubmit.append("access_key", "365d3bf2-3eff-4844-a5cc-ab67429f27d2");
       formDataToSubmit.append("name", formData.name);
       formDataToSubmit.append("email", formData.email);
-      formDataToSubmit.append("subject", formData.subject);
-      formDataToSubmit.append("message", formData.message);
+      formDataToSubmit.append("thema", formData.thema);
+      formDataToSubmit.append("nachricht", formData.nachricht);
 
       // Submit to Web3Forms API
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -68,7 +68,7 @@ export const Contact = () => {
       });
 
       if (!response.ok) {
-        throw new Error("Network response was not ok");
+        throw new Error("Beim Senden ist ein Fehler aufgetreten");
       }
 
       const data = await response.json();
@@ -79,14 +79,14 @@ export const Contact = () => {
         // Reset form after success
         setTimeout(() => {
           setIsSubmitted(false);
-          setFormData({ name: '', email: '', subject: '', message: '' });
+          setFormData({ name: '', email: '', thema: '', nachricht: '' });
         }, 3000);
       } else {
-        throw new Error("Form submission failed");
+        throw new Error("Das Formular konnte nicht gesendet werden");
       }
     } catch (error) {
       // Handle network or other errors
-      setErrors(prev => ({ ...prev, message: "Failed to send message. Please try again." }));
+      setErrors(prev => ({ ...prev, nachricht: "Senden fehlgeschlagen. Versuche es später nochmal." }));
     } finally {
       setIsSubmitting(false);
     }
@@ -112,14 +112,14 @@ export const Contact = () => {
     },
     {
       icon: Phone,
-      label: 'Phone',
+      label: 'Telefon',
       value: CONTACT.phoneNo,
       href: `tel:${CONTACT.phoneNo}`,
       color: 'text-green-500',
     },
     {
       icon: MapPin,
-      label: 'Location',
+      label: 'Standort',
       value: CONTACT.address,
       href: '#',
       color: 'text-purple-500',
@@ -185,10 +185,10 @@ export const Contact = () => {
                   >
                     <CheckCircle size={64} className="text-primary-500 mx-auto mb-4" />
                     <h3 className="font-mono text-xl font-semibold text-primary-500 mb-2">
-                      Message Sent Successfully!
+                      Nachricht erfolgreich gesendet!
                     </h3>
                     <Typewriter
-                      text="> Message delivered. Expect response within 24 hours."
+                      text="> Nachricht gesendet. Antwort wird innerhalb der nächsten 24 Stunden erfolgen."
                       delay={50}
                       className="text-neutral-400 text-sm"
                     />
@@ -207,7 +207,7 @@ export const Contact = () => {
                         value={formData.name}
                         onChange={handleChange}
                         className={`w-full bg-bg-elevated border ${errors.name ? 'border-red-500' : 'border-neutral-700'} rounded-md px-4 py-3 text-neutral-200 placeholder-neutral-600 font-mono focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors`}
-                        placeholder="Your full name"
+                        placeholder="Dein Name"
                       />
                       {errors.name && (
                         <p className="text-red-500 text-sm mt-2">{errors.name}</p>
@@ -226,7 +226,7 @@ export const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                         className={`w-full bg-bg-elevated border ${errors.email ? 'border-red-500' : 'border-neutral-700'} rounded-md px-4 py-3 text-neutral-200 placeholder-neutral-600 font-mono focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors`}
-                        placeholder="your.email@example.com"
+                        placeholder="deine.email@beispiel.com"
                       />
                       {errors.email && (
                         <p className="text-red-500 text-sm mt-2">{errors.email}</p>
@@ -241,14 +241,14 @@ export const Contact = () => {
                       </label>
                       <input
                         type="text"
-                        name="subject"
-                        value={formData.subject}
+                        name="thema"
+                        value={formData.thema}
                         onChange={handleChange}
-                        className={`w-full bg-bg-elevated border ${errors.subject ? 'border-red-500' : 'border-neutral-700'} rounded-md px-4 py-3 text-neutral-200 placeholder-neutral-600 font-mono focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors`}
-                        placeholder="What's this about?"
+                        className={`w-full bg-bg-elevated border ${errors.thema ? 'border-red-500' : 'border-neutral-700'} rounded-md px-4 py-3 text-neutral-200 placeholder-neutral-600 font-mono focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors`}
+                        placeholder="Worum handelt sich die Anfrage?"
                       />
-                      {errors.subject && (
-                        <p className="text-red-500 text-sm mt-2">{errors.subject}</p>
+                      {errors.thema && (
+                        <p className="text-red-500 text-sm mt-2">{errors.thema}</p>
                       )}
                     </div>
 
@@ -259,15 +259,15 @@ export const Contact = () => {
                         message
                       </label>
                       <textarea
-                        name="message"
-                        value={formData.message}
+                        name="nachricht"
+                        value={formData.nachricht}
                         onChange={handleChange}
                         rows={6}
-                        className={`w-full bg-bg-elevated border ${errors.message ? 'border-red-500' : 'border-neutral-700'} rounded-md px-4 py-3 text-neutral-200 placeholder-neutral-600 font-mono focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors resize-none`}
-                        placeholder="Tell me about your project or inquiry..."
+                        className={`w-full bg-bg-elevated border ${errors.nachricht ? 'border-red-500' : 'border-neutral-700'} rounded-md px-4 py-3 text-neutral-200 placeholder-neutral-600 font-mono focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors resize-none`}
+                        placeholder="Erzähle mir über dein Projekt oder Anfrage..."
                       />
-                      {errors.message && (
-                        <p className="text-red-500 text-sm mt-2">{errors.message}</p>
+                      {errors.nachricht && (
+                        <p className="text-red-500 text-sm mt-2">{errors.nachricht}</p>
                       )}
                     </div>
 
@@ -284,12 +284,12 @@ export const Contact = () => {
                       {isSubmitting ? (
                         <div className="flex items-center justify-center space-x-2">
                           <div className="w-5 h-5 border-2 border-neutral-400 border-t-transparent rounded-full animate-spin" />
-                          <span>SENDING...</span>
+                          <span>SENDET...</span>
                         </div>
                       ) : (
                         <div className="flex items-center justify-center space-x-2">
                           <Send size={20} />
-                          <span>[ SEND MESSAGE ]</span>
+                          <span> NACHRICHT SENDEN </span>
                         </div>
                       )}
                     </button>
@@ -309,7 +309,7 @@ export const Contact = () => {
               {/* Contact Methods */}
               <div className="bg-bg-elevated border border-neutral-700 rounded-xl p-6">
                 <h3 className="font-mono text-lg font-semibold text-primary-500 mb-6">
-                  Contact Methods
+                  Kontakt
                 </h3>
                 <div className="space-y-4">
                   {contactMethods.map((method) => {
@@ -332,16 +332,16 @@ export const Contact = () => {
               {/* Availability Status */}
               <div className="bg-bg-elevated border border-neutral-700 rounded-xl p-6">
                 <h3 className="font-mono text-lg font-semibold text-primary-500 mb-6">
-                  Availability Status
+                  Verfügbarkeit
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <div className="w-3 h-3 bg-primary-500 rounded-full animate-pulse" />
-                    <span className="font-mono text-sm text-neutral-200">Available for new projects</span>
+                    <span className="font-mono text-sm text-neutral-200">Verfügbar für neue Projekte</span>
                   </div>
                   <div className="text-sm text-neutral-400">
-                    <div className="mb-2">Response time: Within 24 hours</div>
-                    <div>Time zone: IST (UTC+5:30)</div>
+                    <div className="mb-2">Antwortzeit: Innerhalb der nächsten 24 Stunden</div>
+                    <div>Zeitzone: Europe/Berlin (UTC+1 / UTC+2)</div>
                   </div>
                 </div>
               </div>
@@ -349,7 +349,7 @@ export const Contact = () => {
               {/* Social Links */}
               <div className="bg-bg-elevated border border-neutral-700 rounded-xl p-6">
                 <h3 className="font-mono text-lg font-semibold text-primary-500 mb-6">
-                  Connect With Me
+                  Kontakt aufnehmen
                 </h3>
                 <div className="grid grid-cols-3 gap-4">
                   {socialLinks.map((link) => {
@@ -385,18 +385,18 @@ export const Contact = () => {
             className="bg-bg-surface border border-neutral-700 rounded-xl p-8 font-mono"
           >
             <div className="text-accent-500 mb-4">
-              $ echo "Thank you for visiting!"
+              $ echo "Danke für deinen Besuch!"
             </div>
             <div className="space-y-2 text-neutral-200">
-              <p>I'm always interested in discussing new opportunities and challenging projects.</p>
+              <p>Ich bin immer offen für neue Möglichkeiten und interessante Projekte im Bereich Cloud und DevOps.</p>
               <p className="text-primary-500">
-                Let's build something amazing together.
+                Wenn du motivierte Unterstützung suchst, freue ich mich über eine Nachricht.
               </p>
             </div>
             <div className="mt-6 pt-4 border-t border-neutral-700 text-sm text-neutral-400">
               <div className="flex items-center justify-center space-x-2">
                 <ExternalLink size={16} />
-                <span>Connection established. Awaiting your message...</span>
+                <span>Verbindung hergestellt. Warte auf eingehende Nachricht...</span>
               </div>
             </div>
           </motion.div>
