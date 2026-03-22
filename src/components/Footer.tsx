@@ -65,7 +65,7 @@ export const Footer = () => {
             <div className="mt-2 space-y-1 text-xs">
               <p>© {currentYear} Cloud- und DevOps-Engineer in Ausbildung</p>
               <p>Erstellt mit  React, TypeScript, and moderenem Terminal-Design</p>
-              <p className="text-primary-500">Status: Offen für neue Möglichkeiten im Bereich Cloud uund DevOps</p>
+              <p className="text-primary-500">Status: Offen für neue Möglichkeiten im Bereich Cloud und DevOps</p>
             </div>
           </div>
 
