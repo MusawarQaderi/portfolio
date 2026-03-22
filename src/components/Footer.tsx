@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Github, Linkedin,, Instagram, Mail } from 'lucide-react';
+import { Github, Linkedin, Instagram, Mail } from 'lucide-react';
 import { CONTACT } from '../data/portfolio';
 
 export const Footer = () => {
