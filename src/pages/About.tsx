@@ -68,7 +68,7 @@ export const About = () => {
 
           <div className="space-y-4 text-neutral-200 leading-relaxed">
             <Typewriter
-              text="Hallo, ich bin Musawar Qaderi und entwickle mich gezielt im Bereich Cloud und DevOps."
+              text="Hallo, ich bin [Dein Name] und entwickle mich gezielt im Bereich Cloud und DevOps."
               delay={30}
               className="text-primary-500 font-semibold block mb-4"
             />
@@ -97,6 +97,46 @@ export const About = () => {
           </div>
         </div>
       </motion.div>
+
+      {/* Quick Stats */}
+      <motion.div
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        viewport={{ once: true }}
+        className="lg:col-span-5 space-y-6"
+      >
+        <div className="bg-bg-elevated border border-neutral-700 rounded-xl p-6">
+          <h3 className="font-mono text-primary-500 font-semibold mb-4 text-lg">
+            Quick Stats
+          </h3>
+
+          <div className="space-y-4">
+            <div className="flex items-center justify-between">
+              <span className="text-neutral-400">Status</span>
+              <span className="text-primary-500 font-mono">In Ausbildung</span>
+            </div>
+
+            <div className="flex items-center justify-between">
+              <span className="text-neutral-400">Fokus</span>
+              <span className="text-primary-500 font-mono">Cloud / DevOps</span>
+            </div>
+
+            <div className="flex items-center justify-between">
+              <span className="text-neutral-400">Lernstack</span>
+              <span className="text-primary-500 font-mono">Python, AWS, Docker</span>
+            </div>
+
+            <div className="flex items-center justify-between">
+              <span className="text-neutral-400">Ziel</span>
+              <span className="text-primary-500 font-mono">Cloud Engineer</span>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  </div>
+</section>
 
            {/* Quick Stats */}
 <motion.div
