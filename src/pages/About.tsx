@@ -44,7 +44,7 @@ export const About = () => {
       {/* Terminal Header */}
       <TerminalHeader
         command="cat about.txt"
-        description="Displaying professional background and technical philosophy"
+        description="Einblick in meinen Werdegang und meine Arbeitsweise im Bereich Cloud und DevOps"
       />
 
     {/* Bio Section */}
