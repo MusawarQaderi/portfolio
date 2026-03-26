@@ -3,8 +3,25 @@ import { motion } from 'framer-motion';
 import { TerminalHeader } from '../components/TerminalHeader';
 import { ExternalLink, Github, Filter } from 'lucide-react';
 
-// Platzhalter für deine zukünftigen Projekte
-const PROJECTS_BY_CATEGORY = {
+// TypeScript Interface für die Projekt-Struktur
+interface Project {
+  title: string;
+  description: string;
+  category: 'devops' | 'fullstack';
+  image: string;
+  technologies: string[];
+  githubLink: string;
+  websiteLink?: string; // Das '?' macht diesen Link optional
+}
+
+type ProjectsData = {
+  all: Project[];
+  devops: Project[];
+  fullstack: Project[];
+};
+
+// Platzhalter für deine zukünftigen Projekte mit dem Typ "ProjectsData"
+const PROJECTS_BY_CATEGORY: ProjectsData = {
   all: [
     {
       title: "Platzhalter Projekt 1",
