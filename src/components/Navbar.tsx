@@ -121,7 +121,7 @@ export const Navbar = () => {
                           }`}
                         />
                       )}
-                      <span className="font-mono">$ {item.label.toLowerCase()}</span>
+                      <span className="font-mono">$ {item.label}</span>
                     </div>
                     <ChevronRight
                       size={16}
