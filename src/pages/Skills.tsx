@@ -1,9 +1,4 @@
-Hier ist der Code für die Datei `src/pages/Skills.tsx`, bei der alle sichtbaren Texte, Beschreibungen, Platzhalter und Konsolen-Outputs ins Deutsche übersetzt wurden. Das Terminal und die Funktionen bleiben dabei komplett intakt.
-
-Ersetze einfach den gesamten Inhalt deiner `src/pages/Skills.tsx` durch diesen Code:
-
-```tsx
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { TerminalHeader } from '../components/TerminalHeader';
 import { Typewriter } from '../components/Typewriter';
@@ -150,7 +145,7 @@ export const Skills = () => {
     }, 500);
   };
 
-  const handleKeyPress = (e: React.KeyboardEvent) => {
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter' && currentInput.trim() && !isProcessing) {
       executeCommand(currentInput);
     }
@@ -378,4 +373,3 @@ export const Skills = () => {
     </div>
   );
 };
-```
