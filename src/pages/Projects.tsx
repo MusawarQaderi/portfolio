@@ -2,13 +2,56 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { TerminalHeader } from '../components/TerminalHeader';
 import { ExternalLink, Github, Filter } from 'lucide-react';
-import { PROJECTS_BY_CATEGORY } from '../data/portfolio';
+
+// Platzhalter für deine zukünftigen Projekte
+const PROJECTS_BY_CATEGORY = {
+  all: [
+    {
+      title: "Platzhalter Projekt 1",
+      description: "Dies ist ein Platzhalter für ein zukünftiges Projekt. Hier kannst du später die Details zu deiner DevOps- oder Full-Stack-Anwendung eintragen.",
+      category: "fullstack",
+      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
+      technologies: ["React", "TypeScript", "Node.js", "Docker"],
+      githubLink: "#",
+      websiteLink: "#"
+    },
+    {
+      title: "Platzhalter Projekt 2",
+      description: "Eine weitere Platzhalter-Beschreibung. Ersetze diesen Text durch die echten Informationen deines Projekts.",
+      category: "devops",
+      image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&q=80&w=800",
+      technologies: ["Kubernetes", "AWS", "Terraform", "CI/CD"],
+      githubLink: "#"
+    }
+  ],
+  devops: [
+    {
+      title: "Platzhalter Projekt 2",
+      description: "Eine weitere Platzhalter-Beschreibung. Ersetze diesen Text durch die echten Informationen deines Projekts.",
+      category: "devops",
+      image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&q=80&w=800",
+      technologies: ["Kubernetes", "AWS", "Terraform", "CI/CD"],
+      githubLink: "#"
+    }
+  ],
+  fullstack: [
+    {
+      title: "Platzhalter Projekt 1",
+      description: "Dies ist ein Platzhalter für ein zukünftiges Projekt. Hier kannst du später die Details zu deiner DevOps- oder Full-Stack-Anwendung eintragen.",
+      category: "fullstack",
+      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
+      technologies: ["React", "TypeScript", "Node.js", "Docker"],
+      githubLink: "#",
+      websiteLink: "#"
+    }
+  ]
+};
 
 export const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
 
   const filters = [
-    { id: 'all', label: 'All Projects', count: PROJECTS_BY_CATEGORY.all.length },
+    { id: 'all', label: 'Alle Projekte', count: PROJECTS_BY_CATEGORY.all.length },
     { id: 'devops', label: 'DevOps', count: PROJECTS_BY_CATEGORY.devops.length },
     { id: 'fullstack', label: 'Full-Stack', count: PROJECTS_BY_CATEGORY.fullstack.length },
   ];
@@ -22,7 +65,7 @@ export const Projects = () => {
       {/* Terminal Header */}
       <TerminalHeader
         command="docker ps -a"
-        description="Listing deployed projects and applications"
+        description="Auflistung bereitgestellter Projekte und Anwendungen"
       />
 
       {/* Filter Tabs */}
@@ -118,7 +161,7 @@ export const Projects = () => {
                     ))}
                     {project.technologies.length > 4 && (
                       <span className="px-2 py-1 bg-neutral-800 text-neutral-400 text-xs rounded border border-neutral-700">
-                        +{project.technologies.length - 4} more
+                        +{project.technologies.length - 4} mehr
                       </span>
                     )}
                   </div>
@@ -160,7 +203,7 @@ export const Projects = () => {
               className="text-center py-24"
             >
               <div className="font-mono text-4xl text-neutral-600 mb-4">404</div>
-              <div className="text-neutral-400">No projects found in this category.</div>
+              <div className="text-neutral-400">Keine Projekte in dieser Kategorie gefunden.</div>
             </motion.div>
           )}
         </div>
@@ -183,19 +226,19 @@ export const Projects = () => {
               
               <div className="space-y-2 text-neutral-200">
                 <div className="flex justify-between">
-                  <span>Total Projects:</span>
+                  <span>Gesamtanzahl Projekte:</span>
                   <span className="text-primary-500">{PROJECTS_BY_CATEGORY.all.length}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>DevOps Projects:</span>
+                  <span>DevOps Projekte:</span>
                   <span className="text-primary-500">{PROJECTS_BY_CATEGORY.devops.length}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Full-Stack Projects:</span>
+                  <span>Full-Stack Projekte:</span>
                   <span className="text-primary-500">{PROJECTS_BY_CATEGORY.fullstack.length}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Technologies Used:</span>
+                  <span>Verwendete Technologien:</span>
                   <span className="text-primary-500">
                     {new Set(PROJECTS_BY_CATEGORY.all.flatMap(p => p.technologies)).size}+
                   </span>
@@ -205,7 +248,7 @@ export const Projects = () => {
               <div className="pt-4 border-t border-neutral-700 text-sm text-neutral-400">
                 <div className="flex items-center space-x-2">
                   <span className="text-accent-500">$</span>
-                  <span>echo "Each project demonstrates real-world implementation of cloud-native architecture and modern development practices"</span>
+                  <span>echo "Jedes Projekt demonstriert die praxisnahe Umsetzung von Cloud-Native-Architektur und modernen Entwicklungspraktiken"</span>
                 </div>
               </div>
             </div>
@@ -224,28 +267,28 @@ export const Projects = () => {
             className="bg-gradient-to-br from-bg-elevated to-bg-surface border border-primary-500/20 p-12 rounded-2xl shadow-glow"
           >
             <h2 className="font-mono text-3xl md:text-4xl font-bold text-primary-500 mb-6">
-              Interested in Collaboration?
+              Interessiert an einer Zusammenarbeit?
             </h2>
             <p className="text-xl text-neutral-200 mb-8 leading-relaxed">
-              These projects showcase my expertise in DevOps and full-stack development. 
-              Let's discuss how we can work together on your next project.
+              Diese Projekte zeigen meine Expertise in DevOps und Full-Stack-Entwicklung. 
+              Lassen Sie uns besprechen, wie wir bei Ihrem nächsten Projekt zusammenarbeiten können.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="https://github.com/neerajnakka"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 bg-primary-500 text-bg-surface font-semibold rounded-lg hover:bg-primary-700 transition-all duration-200 shadow-glow hover:shadow-card-hover"
+                className="inline-flex items-center justify-center px-8 py-4 bg-primary-500 text-bg-surface font-semibold rounded-lg hover:bg-primary-700 transition-all duration-200 shadow-glow"
               >
                 <Github className="mr-2 h-5 w-5" />
-                View All Projects
+                Alle Projekte ansehen
               </a>
               <a
                 href="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-neutral-600 text-neutral-200 hover:border-primary-500 hover:text-primary-500 font-semibold rounded-lg transition-all duration-200"
               >
                 <ExternalLink className="mr-2 h-5 w-5" />
-                Start a Project
+                Ein Projekt starten
               </a>
             </div>
           </motion.div>
