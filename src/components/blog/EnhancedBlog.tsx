@@ -53,289 +53,75 @@ interface BlogPost {
   content: string;
 }
 
+// Platzhalter-Daten für zukünftige Blogbeiträge
 const blogPosts: BlogPost[] = [
   {
     id: 1,
-    title: "From Zero to Hero: Building a Production-Grade EKS Cluster with GitOps",
-    category: "DevOps",
-    difficulty: "Intermediate",
-    readTime: "8 min read",
-    date: "2025-01-15",
+    title: "Demnächst: Mein erster Blogbeitrag",
+    category: "Full-Stack",
+    difficulty: "Beginner",
+    readTime: "5 min Lesezeit",
+    date: new Date().toISOString().split('T')[0],
     featured: true,
-    views: "2.5k",
-    likes: "156",
-    comments: "23",
-    excerpt: "Learn how to set up a complete EKS cluster with ArgoCD for GitOps deployment, including best practices for production environments.",
-    tags: ["AWS", "EKS", "GitOps", "ArgoCD", "Kubernetes"],
+    views: "0",
+    likes: "0",
+    comments: "0",
+    excerpt: "Dieser Artikel wird bald veröffentlicht. Schau später wieder vorbei, um spannende Einblicke in meine Projekte zu erhalten.",
+    tags: ["Coming Soon", "Platzhalter"],
     content: `
-# From Zero to Hero: Building a Production-Grade EKS Cluster with GitOps
+# Demnächst: Mein erster Blogbeitrag
 
-In today's cloud-native world, managing Kubernetes infrastructure efficiently is crucial. This comprehensive guide will walk you through setting up a production-grade Amazon EKS cluster with GitOps deployment using ArgoCD.
+Dieser Bereich ist momentan noch ein Platzhalter. In Zukunft werde ich hier meine eigenen technischen Artikel, Tutorials und Erfahrungen teilen.
 
-## Why GitOps?
+## Was dich hier erwarten wird
 
-GitOps is an operational framework that takes DevOps best practices used for application development (version control, collaboration, compliance) and applies them to infrastructure automation.
+- Detaillierte Einblicke in meine Full-Stack Projekte
+- Tutorials zu modernen Web-Technologien
+- Tipps und Tricks aus meinem Entwickler-Alltag
 
-## Prerequisites
-
-- AWS CLI configured
-- kubectl installed
-- Terraform or eksctl
-- Docker knowledge
-- Basic Kubernetes concepts
-
-## Architecture Overview
-
-Our setup includes:
-- EKS cluster with managed node groups
-- ArgoCD for GitOps
-- External DNS
-- AWS Load Balancer Controller
-- cert-manager for SSL certificates
-- Monitoring with Prometheus and Grafana
-
-## Step 1: Cluster Creation
-
-\`\`\`bash
-# Using eksctl
-eksctl create cluster \\
-  --name production-eks \\
-  --region us-west-2 \\
-  --nodegroup-name linux-nodes \\
-  --node-type t3.medium \\
-  --nodes 3 \\
-  --nodes-min 2 \\
-  --nodes-max 10 \\
-  --managed
-\`\`\`
-
-## Step 2: Install ArgoCD
-
-\`\`\`bash
-kubectl create namespace argocd
-kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
-\`\`\`
-
-## Step 3: Configure GitOps
-
-Create your application manifests in a Git repository and configure ArgoCD to sync them automatically.
-
-This approach ensures that your infrastructure is always in sync with your Git repository, providing audit trails and rollback capabilities.
-
-## Conclusion
-
-By following this guide, you'll have a production-ready EKS cluster with GitOps capabilities that can scale with your needs and maintain compliance standards.
+Bleib dran, der erste Beitrag kommt in Kürze!
     `
   },
   {
     id: 2,
-    title: "Infrastructure as Code: Terraform Best Practices for AWS",
+    title: "In Arbeit: Cloud & Infrastruktur",
     category: "Cloud Infrastructure",
-    difficulty: "Advanced",
-    readTime: "12 min read",
-    date: "2025-01-10",
+    difficulty: "Intermediate",
+    readTime: "TBD",
+    date: new Date().toISOString().split('T')[0],
     featured: false,
-    views: "1.8k",
-    likes: "98",
-    comments: "15",
-    excerpt: "Master Terraform infrastructure management with proven patterns, state management, and security practices for AWS deployments.",
-    tags: ["Terraform", "AWS", "IaC", "Security", "Best Practices"],
+    views: "0",
+    likes: "0",
+    comments: "0",
+    excerpt: "Ein zukünftiger Artikel über Cloud-Architektur, Deployment-Strategien und Infrastruktur.",
+    tags: ["Cloud", "In Progress"],
     content: `
-# Infrastructure as Code: Terraform Best Practices for AWS
+# In Arbeit: Cloud & Infrastruktur
 
-Terraform has revolutionized how we manage infrastructure. This guide covers essential best practices for managing AWS resources with Terraform.
+Dieser Beitrag befindet sich aktuell noch in der Entwurfsphase. 
 
-## Project Structure
-
-Organize your Terraform code for maintainability and reusability:
-
-\`\`\`
-terraform/
-├── modules/
-│   ├── vpc/
-│   ├── ecs/
-│   └── rds/
-├── environments/
-│   ├── dev/
-│   ├── staging/
-│   └── prod/
-└── shared/
-    └── variables.tf
-\`\`\`
-
-## State Management
-
-Use remote state storage to maintain state across team members:
-
-\`\`\`hcl
-terraform {
-  backend "s3" {
-    bucket = "my-terraform-state"
-    key    = "infrastructure/terraform.tfstate"
-    region = "us-west-2"
-    
-    dynamodb_table = "terraform-state-lock"
-  }
-}
-\`\`\`
-
-## Security Best Practices
-
-1. Use separate AWS accounts for different environments
-2. Implement least privilege IAM policies
-3. Enable encryption at rest and in transit
-4. Use Terraform variables for sensitive data
-5. Implement state encryption
-
-## Module Reusability
-
-Create reusable modules that can be shared across projects:
-
-\`\`\`hcl
-module "vpc" {
-  source = "./modules/vpc"
-  
-  environment = var.environment
-  region      = var.region
-  
-  cidr_block = "10.0.0.0/16"
-}
-\`\`\`
-
-## Conclusion
-
-Following these best practices will help you maintain scalable, secure, and maintainable infrastructure with Terraform.
+Sobald er fertig ist, findest du hier spannende Inhalte rund um Cloud-Technologien, Server-Management und moderne Infrastruktur-Lösungen.
     `
   },
   {
     id: 3,
-    title: "DevOps Trends 2025: AI, GitOps, and Cloud Native Revolution",
+    title: "Geplanter Beitrag: DevOps Best Practices",
     category: "DevOps",
-    difficulty: "Beginner",
-    readTime: "6 min read",
-    date: "2025-01-05",
+    difficulty: "Advanced",
+    readTime: "TBD",
+    date: new Date().toISOString().split('T')[0],
     featured: false,
-    views: "3.2k",
-    likes: "234",
-    comments: "41",
-    excerpt: "Explore the latest DevOps trends shaping the industry in 2025, from AI-powered automation to enhanced GitOps workflows.",
-    tags: ["Trends", "AI", "GitOps", "Cloud Native", "Automation"],
+    views: "0",
+    likes: "0",
+    comments: "0",
+    excerpt: "Hier entsteht bald ein Artikel über Automatisierung, CI/CD Pipelines und effiziente Entwicklungs-Workflows.",
+    tags: ["DevOps", "CI/CD", "Geplant"],
     content: `
-# DevOps Trends 2025: AI, GitOps, and Cloud Native Revolution
+# Geplanter Beitrag: DevOps Best Practices
 
-The DevOps landscape continues to evolve rapidly. Let's explore the key trends that will shape the industry in 2025.
+Hier gibt es momentan noch nichts zu lesen. 
 
-## AI-Powered Automation
-
-AI is transforming how we approach DevOps:
-- Intelligent incident detection and response
-- Automated capacity planning
-- Predictive maintenance
-- Smart resource optimization
-
-## Enhanced GitOps Workflows
-
-GitOps continues to mature:
-- Multi-cluster synchronization
-- Progressive delivery strategies
-- Policy-as-code enforcement
-- Enhanced rollback capabilities
-
-## Cloud Native Security
-
-Security is becoming more integrated:
-- Zero-trust architectures
-- DevSecOps pipelines
-- Container image scanning
-- Runtime security monitoring
-
-## Platform Engineering
-
-Organizations are building internal platforms:
-- Self-service developer portals
-- Standardized deployment pipelines
-- Automated compliance checks
-- Improved developer experience
-
-## Key Takeaways
-
-1. Embrace automation, but maintain human oversight
-2. Invest in security from day one
-3. Focus on developer experience
-4. Stay adaptable to new technologies
-
-The future of DevOps is bright, with these trends setting the stage for more efficient and secure software delivery.
-    `
-  },
-  {
-    id: 4,
-    title: "Real-time Communication: WebSocket Architecture with Node.js",
-    category: "Full-Stack",
-    difficulty: "Intermediate",
-    readTime: "10 min read",
-    date: "2024-12-28",
-    featured: true,
-    views: "1.9k",
-    likes: "127",
-    comments: "19",
-    excerpt: "Build scalable real-time applications using WebSocket architecture with Node.js, Redis, and message queues.",
-    tags: ["WebSocket", "Node.js", "Redis", "Real-time", "Architecture"],
-    content: `
-# Real-time Communication: WebSocket Architecture with Node.js
-
-Real-time communication has become essential for modern applications. This guide covers building scalable WebSocket applications.
-
-## Architecture Overview
-
-\`\`\`
-Client -> Load Balancer -> WebSocket Server -> Redis Pub/Sub -> Database
-                                    -> Message Queue -> Background Workers
-\`\`\`
-
-## WebSocket Server Setup
-
-\`\`\`javascript
-const WebSocket = require('ws');
-const redis = require('redis');
-
-class WebSocketServer {
-  constructor(port) {
-    this.wss = new WebSocket.Server({ port });
-    this.redisClient = redis.createClient();
-    this.setupWebSocketHandlers();
-  }
-  
-  setupWebSocketHandlers() {
-    this.wss.on('connection', (ws) => {
-      console.log('New client connected');
-      
-      ws.on('message', (message) => {
-        this.handleMessage(ws, message);
-      });
-      
-      ws.on('close', () => {
-        console.log('Client disconnected');
-      });
-    });
-  }
-}
-\`\`\`
-
-## Scaling Strategies
-
-1. **Horizontal Scaling**: Use Redis for session sharing
-2. **Load Balancing**: Implement sticky sessions
-3. **Message Queues**: Handle high message volumes
-4. **Database Optimization**: Use efficient data structures
-
-## Best Practices
-
-- Implement proper error handling
-- Use connection pooling
-- Monitor memory usage
-- Implement rate limiting
-
-This architecture provides a solid foundation for building real-time applications that can scale to thousands of concurrent users.
+Schau demnächst wieder vorbei für einen tiefen Einblick in DevOps-Praktiken, Automatisierung und wie man Code effizienter in Produktion bringt.
     `
   }
 ];
@@ -350,15 +136,17 @@ const EnhancedBlog: React.FC = () => {
   const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
   const [blogViews, setBlogViews] = useState<{[key: number]: number}>({});
 
+  const translateDifficulty = (d: BlogPost['difficulty']) => {
+    return d === 'Beginner' ? 'Einsteiger' : d === 'Intermediate' ? 'Fortgeschritten' : 'Experte';
+  };
+
   const filteredPosts = useMemo(() => {
     let filtered = blogPosts;
 
-    // Filter by category
     if (selectedCategory !== 'All') {
       filtered = filtered.filter(post => post.category === selectedCategory);
     }
 
-    // Filter by search term
     if (searchTerm) {
       filtered = filtered.filter(post =>
         post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -367,7 +155,6 @@ const EnhancedBlog: React.FC = () => {
       );
     }
 
-    // Sort
     filtered.sort((a, b) => {
       switch (sortBy) {
         case 'views':
@@ -386,7 +173,6 @@ const EnhancedBlog: React.FC = () => {
 
   const handlePostClick = (post: BlogPost) => {
     setSelectedPost(post);
-    // Simulate real-time view increment
     setBlogViews(prev => ({
       ...prev,
       [post.id]: (prev[post.id] || parseInt(post.views.replace('k', '000'))) + 1
@@ -420,7 +206,7 @@ const EnhancedBlog: React.FC = () => {
             TECH_BLOG.EXE
           </h1>
           <p className="text-green-200 text-lg max-w-2xl mx-auto">
-            Insights, tutorials, and best practices from the world of DevOps, Cloud Infrastructure, and Full-Stack Development
+            Demnächst: Einblicke, Tutorials und Erfahrungen aus der Welt der Softwareentwicklung.
           </p>
         </motion.div>
 
@@ -432,31 +218,31 @@ const EnhancedBlog: React.FC = () => {
           className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12"
         >
           <StatsCard
-            title="Total Articles"
-            value="4"
+            title="Artikel geplant"
+            value={blogPosts.length.toString()}
             icon={<BookOpen className="w-6 h-6" />}
             color="completed"
           />
           <StatsCard
-            title="Total Views"
+            title="Gesamtaufrufe"
             value={totalViewsFormatted}
-            change="Real-time tracking"
+            change="Echtzeit-Tracking"
             icon={<Eye className="w-6 h-6" />}
             color="completed"
             trend="up"
           />
           <StatsCard
-            title="Engagement Rate"
-            value="72%"
-            change="Active readership"
-            icon={<Heart className="w-6 h-6" />}
+            title="Status"
+            value="In Arbeit"
+            change="Bald verfügbar"
+            icon={<Target className="w-6 h-6" />}
             color="completed"
             trend="up"
           />
           <StatsCard
-            title="Avg. Read Time"
-            value="8 min"
-            change="Industry average: 7 min"
+            title="Lesezeit"
+            value="~ 5 min"
+            change="Durchschnitt"
             icon={<Clock className="w-6 h-6" />}
             color="completed"
             trend="up"
@@ -472,7 +258,7 @@ const EnhancedBlog: React.FC = () => {
         >
           <h2 className="text-2xl font-bold mb-6 text-green-400 flex items-center gap-2">
             <Star className="w-6 h-6" />
-            Featured Articles
+            Highlight
           </h2>
           
           <div className="grid md:grid-cols-2 gap-6">
@@ -486,7 +272,7 @@ const EnhancedBlog: React.FC = () => {
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-3">
                     <TechBadge name={post.category} category={post.category} size="sm" />
-                    <span className="text-xs text-yellow-400 font-medium">⭐ Featured</span>
+                    <span className="text-xs text-yellow-400 font-medium">⭐ Hervorgehoben</span>
                   </div>
                   
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors">
@@ -507,7 +293,7 @@ const EnhancedBlog: React.FC = () => {
                     
                     <div className="flex items-center gap-4 text-xs text-gray-500">
                       <span>{post.readTime}</span>
-                      <span>{new Date(post.date).toLocaleDateString()}</span>
+                      <span>{new Date(post.date).toLocaleDateString('de-DE')}</span>
                     </div>
                   </div>
                   
@@ -535,7 +321,7 @@ const EnhancedBlog: React.FC = () => {
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
             <input
               type="text"
-              placeholder="Search articles..."
+              placeholder="Artikel durchsuchen..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full pl-10 pr-4 py-2 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400"
@@ -555,9 +341,9 @@ const EnhancedBlog: React.FC = () => {
             onChange={(e) => setSortBy(e.target.value as 'date' | 'views' | 'likes')}
             className="px-4 py-2 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-green-400"
           >
-            <option value="date">Latest</option>
-            <option value="views">Most Viewed</option>
-            <option value="likes">Most Liked</option>
+            <option value="date">Neueste</option>
+            <option value="views">Meistaufgerufene</option>
+            <option value="likes">Meistgelikt</option>
           </select>
         </motion.div>
 
@@ -592,7 +378,7 @@ const EnhancedBlog: React.FC = () => {
                         post.difficulty === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400' :
                         'bg-red-500/20 text-red-400'
                       }`}>
-                        {post.difficulty}
+                        {translateDifficulty(post.difficulty)}
                       </span>
                       {post.featured && (
                         <Star className="w-4 h-4 text-yellow-400 fill-current" />
@@ -626,7 +412,7 @@ const EnhancedBlog: React.FC = () => {
                     
                     <div className="flex items-center gap-3 text-xs text-gray-500">
                       <span>{post.readTime}</span>
-                      <span>{new Date(post.date).toLocaleDateString()}</span>
+                      <span>{new Date(post.date).toLocaleDateString('de-DE')}</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </div>
@@ -643,8 +429,8 @@ const EnhancedBlog: React.FC = () => {
             className="text-center py-12"
           >
             <BookOpen className="w-16 h-16 text-gray-600 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-gray-400 mb-2">No articles found</h3>
-            <p className="text-gray-500">Try adjusting your search or filter criteria</p>
+            <h3 className="text-xl font-semibold text-gray-400 mb-2">Keine Artikel gefunden</h3>
+            <p className="text-gray-500">Versuche, deine Suche oder Filterkriterien anzupassen</p>
           </motion.div>
         )}
 
@@ -656,25 +442,25 @@ const EnhancedBlog: React.FC = () => {
           className="mt-16 bg-gradient-to-r from-green-500/10 to-green-600/10 border border-green-400/30 rounded-lg p-8 text-center"
         >
           <h2 className="text-2xl font-bold text-green-400 mb-4">
-            STAY_UPDATED.EXE
+            UP_TO_DATE_BLEIBEN.EXE
           </h2>
           <p className="text-green-200 mb-6 max-w-2xl mx-auto">
-            Subscribe to get the latest DevOps insights, tutorials, and best practices delivered to your inbox.
+            Abonniere den Newsletter, um informiert zu werden, sobald neue Beiträge verfügbar sind.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <input
               type="email"
-              placeholder="Enter your email"
+              placeholder="Deine E-Mail Adresse"
               className="flex-1 px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400"
             />
             <InteractiveButton variant="primary">
-              Subscribe
+              Abonnieren
             </InteractiveButton>
           </div>
           
           <p className="text-xs text-gray-400 mt-3">
-            No spam, unsubscribe at any time.
+            Kein Spam. Jederzeit abmeldbar.
           </p>
         </motion.section>
 
@@ -693,7 +479,7 @@ const EnhancedBlog: React.FC = () => {
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.9, opacity: 0 }}
                 onClick={(e) => e.stopPropagation()}
-                className="bg-gray-900 border border-gray-700 rounded-lg max-w-4xl max-h-[90vh] overflow-hidden"
+                className="bg-gray-900 border border-gray-700 rounded-lg max-w-4xl max-h-[90vh] overflow-hidden w-full"
               >
                 <div className="p-6 border-b border-gray-700">
                   <div className="flex items-center justify-between mb-4">
@@ -704,7 +490,7 @@ const EnhancedBlog: React.FC = () => {
                         selectedPost.difficulty === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400' :
                         'bg-red-500/20 text-red-400'
                       }`}>
-                        {selectedPost.difficulty}
+                        {translateDifficulty(selectedPost.difficulty)}
                       </span>
                       {selectedPost.featured && (
                         <Star className="w-4 h-4 text-yellow-400 fill-current" />
@@ -725,7 +511,7 @@ const EnhancedBlog: React.FC = () => {
                   <div className="flex items-center gap-4 text-sm text-gray-400">
                     <div className="flex items-center gap-1">
                       <Calendar className="w-4 h-4" />
-                      <span>{new Date(selectedPost.date).toLocaleDateString()}</span>
+                      <span>{new Date(selectedPost.date).toLocaleDateString('de-DE')}</span>
                     </div>
                     <div className="flex items-center gap-1">
                       <Clock className="w-4 h-4" />
@@ -733,7 +519,7 @@ const EnhancedBlog: React.FC = () => {
                     </div>
                     <div className="flex items-center gap-1">
                       <Eye className="w-4 h-4" />
-                      <span>{getPostViews(selectedPost)} views</span>
+                      <span>{getPostViews(selectedPost)} Aufrufe</span>
                     </div>
                   </div>
                 </div>
