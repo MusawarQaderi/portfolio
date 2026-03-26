@@ -1,3 +1,8 @@
+Hier ist der Code für die Datei `src/pages/Skills.tsx`, bei der alle sichtbaren Texte, Beschreibungen, Platzhalter und Konsolen-Outputs ins Deutsche übersetzt wurden. Das Terminal und die Funktionen bleiben dabei komplett intakt.
+
+Ersetze einfach den gesamten Inhalt deiner `src/pages/Skills.tsx` durch diesen Code:
+
+```tsx
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { TerminalHeader } from '../components/TerminalHeader';
@@ -13,42 +18,42 @@ export const Skills = () => {
   const categories = [
     {
       id: 'cloud',
-      title: 'Cloud Platforms',
+      title: 'Cloud-Plattformen',
       icon: Cloud,
       skills: SKILLS_BY_CATEGORY.cloud,
       color: 'text-blue-500',
     },
     {
       id: 'containers',
-      title: 'Container & Orchestration',
+      title: 'Container & Orchestrierung',
       icon: Container,
       skills: SKILLS_BY_CATEGORY.containers,
       color: 'text-blue-400',
     },
     {
       id: 'infrastructure',
-      title: 'Infrastructure as Code',
+      title: 'Infrastruktur als Code',
       icon: TerminalIcon,
       skills: SKILLS_BY_CATEGORY.infrastructure,
       color: 'text-purple-500',
     },
     {
       id: 'devops',
-      title: 'DevOps & Automation',
+      title: 'DevOps & Automatisierung',
       icon: Code,
       skills: SKILLS_BY_CATEGORY.devops,
       color: 'text-green-500',
     },
     {
       id: 'development',
-      title: 'Development Stack',
+      title: 'Entwicklungs-Stack',
       icon: Code,
       skills: SKILLS_BY_CATEGORY.development,
       color: 'text-orange-500',
     },
     {
       id: 'database',
-      title: 'Databases',
+      title: 'Datenbanken',
       icon: Database,
       skills: SKILLS_BY_CATEGORY.database,
       color: 'text-red-500',
@@ -57,24 +62,24 @@ export const Skills = () => {
 
   const commands = {
     help: [
-      'Available commands:',
-      '  ls <category>     - List skills in a category',
-      '  cat <skill>       - Show skill details',
-      '  levels            - Show proficiency levels',
-      '  clear             - Clear terminal',
-      '  help              - Show this help',
+      'Verfügbare Befehle:',
+      '  ls <kategorie>    - Fähigkeiten einer Kategorie auflisten',
+      '  cat <fähigkeit>   - Details einer Fähigkeit anzeigen',
+      '  levels            - Kenntnisstufen anzeigen',
+      '  clear             - Terminal leeren',
+      '  help              - Diese Hilfe anzeigen',
     ],
     levels: [
-      'Proficiency Levels:',
-      '  Beginner (30%)     - Basic understanding',
-      '  Intermediate (60%) - Practical experience',
-      '  Advanced (85%)     - Production usage',
-      '  Expert (100%)      - Deep expertise',
+      'Kenntnisstufen:',
+      '  Anfänger (30%)        - Grundlegendes Verständnis',
+      '  Fortgeschritten (60%) - Praktische Erfahrung',
+      '  Erfahren (85%)        - Einsatz in Produktion',
+      '  Experte (100%)        - Tiefgehendes Fachwissen',
     ],
     clear: () => setTerminalOutput([]),
     default: (input: string) => [
-      `Command not found: ${input}`,
-      'Type "help" for available commands.',
+      `Befehl nicht gefunden: ${input}`,
+      'Tippe "help" für verfügbare Befehle.',
     ],
   };
 
@@ -109,7 +114,7 @@ export const Skills = () => {
             ];
           } else {
             output = [
-              'Available categories:',
+              'Verfügbare Kategorien:',
               ...categories.map(cat => `  ${cat.id} - ${cat.title}`)
             ];
           }
@@ -125,14 +130,14 @@ export const Skills = () => {
 
           if (skill) {
             output = [
-              `Skill: ${skill.name}`,
-              `Category: ${skill.category}`,
-              `Proficiency: ${skill.level}%`,
+              `Fähigkeit: ${skill.name}`,
+              `Kategorie: ${skill.category}`,
+              `Kenntnisstufe: ${skill.level}%`,
               '',
               `Icon: ${skill.icon}`,
             ];
           } else {
-            output = [`Skill "${skillName}" not found`];
+            output = [`Fähigkeit "${skillName}" nicht gefunden`];
           }
           break;
         default:
@@ -156,7 +161,7 @@ export const Skills = () => {
       {/* Terminal Header */}
       <TerminalHeader
         command="ls -la skills/"
-        description="Exploring technical expertise across cloud, development, and DevOps domains"
+        description="Erkundung technischer Expertise in den Bereichen Cloud, Entwicklung und DevOps"
       />
 
       {/* Skills Categories */}
@@ -170,10 +175,10 @@ export const Skills = () => {
             className="text-center mb-16"
           >
             <h2 className="font-mono text-3xl md:text-4xl font-bold text-primary-500 mb-4">
-              Technical Expertise
+              Technische Expertise
             </h2>
             <p className="text-neutral-400 max-w-2xl mx-auto">
-              Comprehensive skill set spanning cloud infrastructure, development, and DevOps practices
+              Umfassendes Fähigkeitenprofil aus den Bereichen Cloud-Infrastruktur, Entwicklung und DevOps-Praktiken
             </p>
           </motion.div>
 
@@ -228,7 +233,7 @@ export const Skills = () => {
                           {/* Proficiency Bar */}
                           <div className="space-y-2">
                             <div className="flex justify-between text-xs">
-                              <span className="text-neutral-400">Proficiency</span>
+                              <span className="text-neutral-400">Kenntnisstufe</span>
                               <span className="text-primary-500 font-mono">{skill.level}%</span>
                             </div>
                             <div className="w-full bg-neutral-700 rounded-full h-2">
@@ -263,10 +268,10 @@ export const Skills = () => {
             className="text-center mb-16"
           >
             <h2 className="font-mono text-3xl md:text-4xl font-bold text-primary-500 mb-4">
-              Interactive Skill Explorer
+              Interaktiver Skill-Explorer
             </h2>
             <p className="text-neutral-400 max-w-2xl mx-auto">
-              Use terminal commands to explore my skills in detail
+              Nutze Terminal-Befehle, um meine Fähigkeiten im Detail zu erkunden
             </p>
           </motion.div>
 
@@ -293,13 +298,13 @@ export const Skills = () => {
                 {terminalOutput.length === 0 && (
                   <div className="text-neutral-400">
                     <Typewriter
-                      text="Welcome to Skills Explorer. Type 'help' to see available commands."
+                      text="Willkommen im Skill-Explorer. Tippe 'help' für verfügbare Befehle."
                       delay={30}
                       className="block"
                     />
                     <div className="mt-4">
                       <span className="text-accent-500">$</span>
-                      <span className="text-neutral-400 ml-2">ready for input...</span>
+                      <span className="text-neutral-400 ml-2">Bereit für Eingabe...</span>
                     </div>
                   </div>
                 )}
@@ -309,7 +314,7 @@ export const Skills = () => {
                     key={index}
                     className={`${
                       line.startsWith('$') ? 'text-accent-500' : 
-                      line.includes('Command not found') ? 'text-red-500' :
+                      line.includes('nicht gefunden') ? 'text-red-500' :
                       'text-neutral-200'
                     }`}
                   >
@@ -337,7 +342,7 @@ export const Skills = () => {
                     onChange={(e) => setCurrentInput(e.target.value)}
                     onKeyPress={handleKeyPress}
                     className="flex-1 bg-transparent text-primary-500 outline-none placeholder-neutral-600 font-mono"
-                    placeholder={isProcessing ? "processing..." : "enter command..."}
+                    placeholder={isProcessing ? "Verarbeite..." : "Befehl eingeben..."}
                     disabled={isProcessing}
                   />
                   {!isProcessing && (
@@ -350,10 +355,10 @@ export const Skills = () => {
             {/* Quick Commands */}
             <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                { cmd: 'help', desc: 'Show commands' },
-                { cmd: 'ls cloud', desc: 'Cloud skills' },
-                { cmd: 'levels', desc: 'Proficiency guide' },
-                { cmd: 'cat Docker', desc: 'Skill details' },
+                { cmd: 'help', desc: 'Befehle anzeigen' },
+                { cmd: 'ls cloud', desc: 'Cloud-Fähigkeiten' },
+                { cmd: 'levels', desc: 'Kenntnisstufen' },
+                { cmd: 'cat Docker', desc: 'Skill-Details' },
               ].map((item) => (
                 <button
                   key={item.cmd}
@@ -373,3 +378,4 @@ export const Skills = () => {
     </div>
   );
 };
+```
