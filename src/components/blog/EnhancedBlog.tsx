@@ -248,7 +248,27 @@ const EnhancedBlog: React.FC = () => {
             trend="up"
           />
         </motion.div>
+        
+        {/* --- COMING SOON WRAPPER START --- */}
+        <div className="relative">
+          {/* Coming Soon Overlay */}
+          <div className="absolute inset-0 z-10 flex items-center justify-center rounded-xl">
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+              className="bg-gray-900/90 backdrop-blur-md border border-green-400/50 px-10 py-8 rounded-2xl shadow-[0_0_20px_rgba(74,222,128,0.2)] text-center max-w-md mx-4"
+            >
+              <h3 className="text-3xl font-bold text-green-400 mb-3">Coming Soon</h3>
+              <p className="text-gray-300">
+                Spannende Fachartikel, Tutorials und Einblicke sind in Arbeit und werden in Kürze hier veröffentlicht!
+              </p>
+            </motion.div>
+          </div>
 
+          {/* Blurred Content Container */}
+          <div className="blur-md opacity-60 pointer-events-none select-none">
+        
         {/* Featured Posts */}
         <motion.section
           initial={{ opacity: 0, y: 20 }}
@@ -433,7 +453,10 @@ const EnhancedBlog: React.FC = () => {
             <p className="text-gray-500">Versuche, deine Suche oder Filterkriterien anzupassen</p>
           </motion.div>
         )}
-
+         
+        </div> {/* Ende Blurred Content Container */}
+        </div> {/* Ende Coming Soon Wrapper */}
+            
         {/* Newsletter Signup */}
         <motion.section
           initial={{ opacity: 0, y: 20 }}
