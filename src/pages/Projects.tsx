@@ -25,7 +25,7 @@ const PROJECTS_BY_CATEGORY: ProjectsData = {
   all: [
     {
       title: "Platzhalter Projekt 1",
-      description: "Dies ist ein Platzhalter für ein zukünftiges Projekt. Hier kannst du später die Details zu deiner DevOps- oder Full-Stack-Anwendung eintragen.",
+      description: "Dies ist ein Platzhalter für mein zukünftiges Projekt. Hier werde ich später die Details zu meiner DevOps- oder Full-Stack-Anwendung eintragen.",
       category: "fullstack",
       image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
       technologies: ["React", "TypeScript", "Node.js", "Docker"],
@@ -34,7 +34,7 @@ const PROJECTS_BY_CATEGORY: ProjectsData = {
     },
     {
       title: "Platzhalter Projekt 2",
-      description: "Eine weitere Platzhalter-Beschreibung. Ersetze diesen Text durch die echten Informationen deines Projekts.",
+      description: "Eine weitere Platzhalter-Beschreibung.",
       category: "devops",
       image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&q=80&w=800",
       technologies: ["Kubernetes", "AWS", "Terraform", "CI/CD"],
@@ -44,7 +44,7 @@ const PROJECTS_BY_CATEGORY: ProjectsData = {
   devops: [
     {
       title: "Platzhalter Projekt 2",
-      description: "Eine weitere Platzhalter-Beschreibung. Ersetze diesen Text durch die echten Informationen deines Projekts.",
+      description: "Eine weitere Platzhalter-Beschreibung.",
       category: "devops",
       image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&q=80&w=800",
       technologies: ["Kubernetes", "AWS", "Terraform", "CI/CD"],
@@ -54,7 +54,7 @@ const PROJECTS_BY_CATEGORY: ProjectsData = {
   fullstack: [
     {
       title: "Platzhalter Projekt 1",
-      description: "Dies ist ein Platzhalter für ein zukünftiges Projekt. Hier kannst du später die Details zu deiner DevOps- oder Full-Stack-Anwendung eintragen.",
+      description: "Dies ist ein Platzhalter für mein zukünftiges Projekt. Hier werde ich später die Details zu meiner DevOps- oder Full-Stack-Anwendung eintragen.",
       category: "fullstack",
       image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
       technologies: ["React", "TypeScript", "Node.js", "Docker"],
