@@ -13,7 +13,7 @@ export const Navbar = () => {
     { path: '/skills', label: 'Fähigkeiten' },
     { path: '/projects', label: 'Projekte' },
     { path: '/blog', label: 'Blogs', icon: BookOpen },
-    { path: '/case-studies', label: 'Fallstudien', icon: FileText },
+    // { path: '/case-studies', label: 'Fallstudien', icon: FileText },
     { path: '/contact', label: 'Kontakt' },
   ];
 
