@@ -8,13 +8,13 @@ export const Navbar = () => {
   const location = useLocation();
 
   const navItems = [
-    { path: '/', label: 'Home' },
-    { path: '/about', label: 'About' },
-    { path: '/skills', label: 'Skills' },
-    { path: '/projects', label: 'Projects' },
-    { path: '/blog', label: 'Blog', icon: BookOpen },
-    { path: '/case-studies', label: 'Case Studies', icon: FileText },
-    { path: '/contact', label: 'Contact' },
+    { path: '/', label: 'Start' },
+    { path: '/about', label: 'Über mich' },
+    { path: '/skills', label: 'Fähigkeiten' },
+    { path: '/projects', label: 'Projekte' },
+    { path: '/blog', label: 'Blogs', icon: BookOpen },
+    { path: '/case-studies', label: 'Fallstudien', icon: FileText },
+    { path: '/contact', label: 'Kontakt' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
