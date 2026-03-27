@@ -20,9 +20,16 @@ export const About = () => {
       icon: Calendar,
     },
      {
-      year: '2020 - 2025',
+      year: '2018 - 2025',
       title: 'Lagerist',
       company: 'CPS Copier Products and Supplies GmbH',
+      description: 'Grundlagen in Informatik, Softwareentwicklung und IT-Systemen. Anschließend Fokus auf praxisorientierte Ausbildung im Bereich Cloud und DevOps.',
+      icon: Calendar,
+    },
+     {
+      year: '2018',
+      title: 'Abitur',
+      company: 'Geschwister-Scholl-Stadtteilschule Hamburg',
       description: 'Grundlagen in Informatik, Softwareentwicklung und IT-Systemen. Anschließend Fokus auf praxisorientierte Ausbildung im Bereich Cloud und DevOps.',
       icon: Calendar,
     },
