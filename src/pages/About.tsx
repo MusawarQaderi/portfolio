@@ -30,7 +30,7 @@ export const About = () => {
       year: '2018',
       title: 'Abitur',
       company: 'Geschwister-Scholl-Stadtteilschule Hamburg',
-      description: 'Grundlagen in Informatik, Softwareentwicklung und IT-Systemen. Anschließend Fokus auf praxisorientierte Ausbildung im Bereich Cloud und DevOps.',
+      // description: 'Grundlagen in Informatik, Softwareentwicklung und IT-Systemen. Anschließend Fokus auf praxisorientierte Ausbildung im Bereich Cloud und DevOps.',
       icon: School,
     },
   ];
