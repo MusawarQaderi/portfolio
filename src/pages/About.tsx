@@ -11,11 +11,18 @@ export const About = () => {
       company: 'CBM Projektmanagement GmbH',
       description:
         'Praxisorientierter Aufbau von Fähigkeiten im Bereich Cloud und DevOps mit Fokus auf Automatisierung, Deployment und Cloud-Infrastruktur. Arbeit mit Python, AWS, Docker sowie Grundlagen in CI/CD und Linux.',
-      icon: Code,},
+      icon: Calendar,},
     {
       year: '2023 - 2025',
       title: 'Studium - Informatik',
       company: 'Universität Hamburg',
+      description: 'Grundlagen in Informatik, Softwareentwicklung und IT-Systemen. Anschließend Fokus auf praxisorientierte Ausbildung im Bereich Cloud und DevOps.',
+      icon: Calendar,
+    },
+     {
+      year: '2020 - 2025',
+      title: 'Lagerist',
+      company: 'CPS Copier Products and Supplies GmbH',
       description: 'Grundlagen in Informatik, Softwareentwicklung und IT-Systemen. Anschließend Fokus auf praxisorientierte Ausbildung im Bereich Cloud und DevOps.',
       icon: Calendar,
     },
