@@ -16,7 +16,7 @@ export const About = () => {
       year: '2023 - 2025',
       title: 'Studium - Informatik',
       company: 'Universität Hamburg',
-      description: 'Grundlagen in Informatik, Softwareentwicklung und IT-Systemen. Anschließend Fokus auf praxisorientierte Ausbildung im Bereich Cloud und DevOps.',
+      description: 'Grundlagen in Informatik, Softwareentwicklung und IT-Systemen. Programmierung mit Java sowie objektorientierte Konzepte, ergänzt durch Einblicke in Datenstrukturen, Algorithmen und Systemarchitekturen. Entwicklung analytischer und strukturierter Problemlösungsfähigkeiten.',
       icon: GraduationCap,
     },
      {
