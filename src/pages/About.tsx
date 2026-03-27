@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { TerminalHeader } from '../components/TerminalHeader';
 import { Typewriter } from '../components/Typewriter';
-import { Calendar, MapPin, Code, Zap } from 'lucide-react';
+import { Cloud, GraduationCap, Briefcase, School, Calendar, MapPin, Code, Zap } from 'lucide-react';
 
 export const About = () => {
   const timeline = [
