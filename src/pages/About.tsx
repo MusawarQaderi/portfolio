@@ -23,7 +23,7 @@ export const About = () => {
       year: '2018 - 2025',
       title: 'Lagerist',
       company: 'CPS Copier Products and Supplies GmbH',
-      description: 'Grundlagen in Informatik, Softwareentwicklung und IT-Systemen. Anschließend Fokus auf praxisorientierte Ausbildung im Bereich Cloud und DevOps.',
+      description: 'Organisation und Abwicklung von Lagerprozessen, inklusive Kommissionierung, Wareneingang und Versandvorbereitung. Bearbeitung von Aufträgen sowie Sicherstellung termingerechter Auslieferungen. Unterstützung bei der Fehleranalyse und Anpassung von Druckerzubehör (z. B. Austausch von Toner-Chips) zur Gewährleistung der Funktionsfähigkeit.',
       icon: Briefcase,
     },
      {
