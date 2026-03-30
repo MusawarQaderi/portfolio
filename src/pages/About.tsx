@@ -88,20 +88,19 @@ export const About = () => {
             />
 
             <p>
-              Mein Weg in die IT begann mit dem Interesse an Systemen und Software,
-              mit dem klaren Ziel, mich auf Cloud und DevOps zu spezialisieren.
+              Mein Weg in die IT begann mit dem Interesse an Systemen und Software, aus dem sich der klare Fokus entwickelt hat, mich auf moderne Cloud-Technologien und DevOps-Praktiken zu spezialisieren.
             </p>
 
             <p>
-              Aktuell mache ich eine Umschulung zum Fachinformatiker und baue parallel
-              ein praxisorientiertes Skillset in den Bereichen Cloud-Infrastruktur,
-              Automatisierung und Deployment auf.
+              Aktuell absolviere ich eine Umschulung zum Fachinformatiker für Systemintegration und baue parallel ein praxisorientiertes Skillset in den Bereichen Cloud-Infrastruktur, Automatisierung und Deployment auf.
             </p>
 
             <p>
-              Ich arbeite mit Technologien wie Python, AWS und Docker und beschäftige mich
-              mit Linux, CI/CD-Prozessen und modernen DevOps-Tools, um Anwendungen effizient
-              und reproduzierbar in die Cloud zu bringen.
+              Dabei arbeite ich mit Technologien wie Python, AWS und Docker und beschäftige mich intensiv mit Linux, CI/CD-Prozessen sowie modernen DevOps-Tools. Mein Ziel ist es, Anwendungen effizient, automatisiert und reproduzierbar in Cloud-Umgebungen bereitzustellen.
+            </p>
+
+             <p>
+              Besonderen Wert lege ich darauf, theoretisches Wissen direkt in die Praxis umzusetzen. Ich arbeite kontinuierlich an eigenen Projekten, optimiere Prozesse und entwickle Lösungen, um ein tiefes Verständnis für skalierbare und zuverlässige Cloud-Systeme aufzubauen.
             </p>
 
             <p className="text-primary-500 font-medium">
