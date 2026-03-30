@@ -1,82 +1,37 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { TerminalHeader } from '../components/TerminalHeader';
-import { ExternalLink, Github, Filter } from 'lucide-react';
+import { ExternalLink, Github } from 'lucide-react';
 
-// TypeScript Interface für die Projekt-Struktur
+// TypeScript Interface für die Projekt-Struktur ohne Kategorie
 interface Project {
   title: string;
   description: string;
-  category: 'devops' | 'fullstack';
   image: string;
   technologies: string[];
   githubLink: string;
   websiteLink?: string; // Das '?' macht diesen Link optional
 }
 
-type ProjectsData = {
-  all: Project[];
-  devops: Project[];
-  fullstack: Project[];
-};
-
-// Platzhalter für deine zukünftigen Projekte mit dem Typ "ProjectsData"
-const PROJECTS_BY_CATEGORY: ProjectsData = {
-  all: [
-    {
-      title: "Platzhalter Projekt 1",
-      description: "Dies ist ein Platzhalter für mein zukünftiges Projekt. Hier werde ich später die Details zu meiner DevOps- oder Full-Stack-Anwendung eintragen.",
-      category: "fullstack",
-      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
-      technologies: ["React", "TypeScript", "Node.js", "Docker"],
-      githubLink: "#",
-      websiteLink: "#"
-    },
-    {
-      title: "Platzhalter Projekt 2",
-      description: "Eine weitere Platzhalter-Beschreibung.",
-      category: "devops",
-      image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&q=80&w=800",
-      technologies: ["Kubernetes", "AWS", "Terraform", "CI/CD"],
-      githubLink: "#"
-    }
-  ],
-  devops: [
-    {
-      title: "Platzhalter Projekt 2",
-      description: "Eine weitere Platzhalter-Beschreibung.",
-      category: "devops",
-      image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&q=80&w=800",
-      technologies: ["Kubernetes", "AWS", "Terraform", "CI/CD"],
-      githubLink: "#"
-    }
-  ],
-  fullstack: [
-    {
-      title: "Platzhalter Projekt 1",
-      description: "Dies ist ein Platzhalter für mein zukünftiges Projekt. Hier werde ich später die Details zu meiner DevOps- oder Full-Stack-Anwendung eintragen.",
-      category: "fullstack",
-      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
-      technologies: ["React", "TypeScript", "Node.js", "Docker"],
-      githubLink: "#",
-      websiteLink: "#"
-    }
-  ]
-};
+// Platzhalter für deine zukünftigen Projekte als einfaches Array
+const PROJECTS: Project[] = [
+  {
+    title: "Platzhalter Projekt 1",
+    description: "Dies ist ein Platzhalter für mein zukünftiges Projekt. Hier werde ich später die Details zu meiner Anwendung eintragen.",
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
+    technologies: ["React", "TypeScript", "Node.js", "Docker"],
+    githubLink: "#",
+    websiteLink: "#"
+  },
+  {
+    title: "Platzhalter Projekt 2",
+    description: "Eine weitere Platzhalter-Beschreibung.",
+    image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&q=80&w=800",
+    technologies: ["Kubernetes", "AWS", "Terraform", "CI/CD"],
+    githubLink: "#"
+  }
+];
 
 export const Projects = () => {
-  const [activeFilter, setActiveFilter] = useState('all');
-
-  const filters = [
-    { id: 'all', label: 'Alle Projekte', count: PROJECTS_BY_CATEGORY.all.length },
-    { id: 'devops', label: 'DevOps', count: PROJECTS_BY_CATEGORY.devops.length },
-    { id: 'fullstack', label: 'Full-Stack', count: PROJECTS_BY_CATEGORY.fullstack.length },
-  ];
-
-  const getProjects = () => {
-    return PROJECTS_BY_CATEGORY[activeFilter as keyof typeof PROJECTS_BY_CATEGORY] || PROJECTS_BY_CATEGORY.all;
-  };
-
   return (
     <div className="min-h-screen bg-bg-page">
       {/* Terminal Header */}
@@ -85,37 +40,6 @@ export const Projects = () => {
         description="Auflistung bereitgestellter Projekte und Anwendungen"
       />
 
-      {/* Filter Tabs */}
-      <section className="py-12 bg-bg-surface/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex flex-wrap justify-center gap-4"
-          >
-            {filters.map((filter) => (
-              <button
-                key={filter.id}
-                onClick={() => setActiveFilter(filter.id)}
-                className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-mono font-medium transition-all duration-200 ${
-                  activeFilter === filter.id
-                    ? 'bg-primary-500 text-bg-surface shadow-glow'
-                    : 'bg-bg-elevated text-neutral-200 border border-neutral-700 hover:border-primary-500/50 hover:text-primary-500'
-                }`}
-              >
-                <Filter size={16} />
-                <span>{filter.label}</span>
-                <span className={`text-xs px-2 py-1 rounded-full ${
-                  activeFilter === filter.id ? 'bg-bg-surface text-primary-500' : 'bg-neutral-700 text-neutral-400'
-                }`}>
-                  {filter.count}
-                </span>
-              </button>
-            ))}
-          </motion.div>
-        </div>
-      </section>
       {/* Projects Grid */}
       <section className="py-24 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -140,7 +64,7 @@ export const Projects = () => {
             layout
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 blur-md opacity-60 pointer-events-none select-none"
           >
-            {getProjects().map((project, index) => (
+            {PROJECTS.map((project, index) => (
               <motion.div
                 key={project.title}
                 layout
@@ -157,17 +81,6 @@ export const Projects = () => {
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-bg-surface via-transparent to-transparent opacity-60" />
-                  
-                  {/* Project Type Badge */}
-                  <div className="absolute top-4 right-4">
-                    <span className={`px-3 py-1 rounded-full text-xs font-mono font-medium ${
-                      project.category === 'devops' 
-                        ? 'bg-green-500/20 text-green-500 border border-green-500/30'
-                        : 'bg-blue-500/20 text-blue-500 border border-blue-500/30'
-                    }`}>
-                      {project.category === 'devops' ? 'DevOps' : 'Full-Stack'}
-                    </span>
-                  </div>
                 </div>
 
                 {/* Project Content */}
@@ -194,14 +107,14 @@ export const Projects = () => {
           </motion.div>
 
           {/* Empty State */}
-          {getProjects().length === 0 && (
+          {PROJECTS.length === 0 && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               className="text-center py-24"
             >
               <div className="font-mono text-4xl text-neutral-600 mb-4">404</div>
-              <div className="text-neutral-400">Keine Projekte in dieser Kategorie gefunden.</div>
+              <div className="text-neutral-400">Keine Projekte gefunden.</div>
             </motion.div>
           )}
         </div>
@@ -225,20 +138,12 @@ export const Projects = () => {
               <div className="space-y-2 text-neutral-200">
                 <div className="flex justify-between">
                   <span>Gesamtanzahl Projekte:</span>
-                  <span className="text-primary-500">{PROJECTS_BY_CATEGORY.all.length}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>DevOps Projekte:</span>
-                  <span className="text-primary-500">{PROJECTS_BY_CATEGORY.devops.length}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Full-Stack Projekte:</span>
-                  <span className="text-primary-500">{PROJECTS_BY_CATEGORY.fullstack.length}</span>
+                  <span className="text-primary-500">{PROJECTS.length}</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Verwendete Technologien:</span>
                   <span className="text-primary-500">
-                    {new Set(PROJECTS_BY_CATEGORY.all.flatMap(p => p.technologies)).size}+
+                    {new Set(PROJECTS.flatMap(p => p.technologies)).size}+
                   </span>
                 </div>
               </div>
@@ -268,7 +173,7 @@ export const Projects = () => {
               Interessiert an einer Zusammenarbeit?
             </h2>
             <p className="text-xl text-neutral-200 mb-8 leading-relaxed">
-              Diese Projekte zeigen meine Expertise in DevOps und Full-Stack-Entwicklung. 
+              Diese Projekte zeigen meine Expertise und Fähigkeiten. 
               Lassen Sie uns besprechen, wie wir bei Ihrem nächsten Projekt zusammenarbeiten können.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
