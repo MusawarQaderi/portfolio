@@ -152,7 +152,7 @@ export const Contact = () => {
       {/* Terminal Header */}
       <TerminalHeader
         command="ping contact.server"
-        description="Establishing connection to communication endpoint"
+        description="Verbindung zum Kommunikationsendpunkt wird hergestellt"
       />
 
       <section className="py-24">
@@ -169,11 +169,11 @@ export const Contact = () => {
               <div className="bg-bg-surface border border-neutral-700 rounded-xl p-8 shadow-card">
                 <div className="mb-8">
                   <h2 className="font-mono text-2xl font-bold text-primary-500 mb-4">
-                    Send Message
+                    Nachricht senden
                   </h2>
                   <div className="font-mono text-sm text-accent-500">
                     <span>$</span>
-                    <span className="text-primary-500 ml-2">cat message_template.txt</span>
+                    <span className="text-primary-500 ml-2">cat nachricht_vorlage.txt</span>
                   </div>
                 </div>
 
@@ -237,7 +237,7 @@ export const Contact = () => {
                     <div>
                       <label className="block font-mono text-sm text-accent-500 mb-2">
                         <span className="text-primary-500 mr-2">&gt;</span>
-                        subject
+                        thema
                       </label>
                       <input
                         type="text"
@@ -256,7 +256,7 @@ export const Contact = () => {
                     <div>
                       <label className="block font-mono text-sm text-accent-500 mb-2">
                         <span className="text-primary-500 mr-2">&gt;</span>
-                        message
+                        nachricht
                       </label>
                       <textarea
                         name="nachricht"
