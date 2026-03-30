@@ -10,7 +10,6 @@ export const About = () => {
       title: 'Umschulung - Fachinformatiker für Systemintegration',
       company: 'CBM Projektmanagement GmbH',
       description:
-        description:
 'Absolvierung einer Umschulung zum Fachinformatiker für Systemintegration. Parallel eigenständiger Aufbau von Kenntnissen im Bereich Cloud und DevOps mit Fokus auf Automatisierung und Deployment. Arbeit mit Python, AWS und Docker sowie Beschäftigung mit CI/CD-Prozessen und Linux. Stetige Vertiefung durch praktische Übungen und eigene Projekte.',
       icon: Cloud,},
     {
