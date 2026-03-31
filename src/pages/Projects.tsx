@@ -150,8 +150,8 @@ export const Projects = () => {
 
               <div className="pt-4 border-t border-neutral-700 text-sm text-neutral-400">
                 <div className="flex items-center space-x-2">
-                  <span className="text-accent-500">$</span>
-                  <span>echo "Jedes Projekt demonstriert die praxisnahe Umsetzung von Cloud-Native-Architektur und modernen Entwicklungspraktiken"</span>
+                  <span className="text-accent-500">$ echo</span>
+                  <span>"Jedes Projekt demonstriert die praxisnahe Umsetzung von Cloud-Native-Architektur und modernen Entwicklungspraktiken"</span>
                 </div>
               </div>
             </div>
