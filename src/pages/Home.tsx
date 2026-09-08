@@ -37,7 +37,7 @@ export const Home = () => {
 
             {/* Typewriter heading */}
             <div className="font-mono text-4xl md:text-6xl lg:text-8xl font-bold tracking-tight text-primary-500">
-              <Typewriter text="Cloud- & DevOps-Engineer in Ausbildung" delay={80} />
+              <Typewriter text="Fachinformatiker Systemintegration in Ausbildung" delay={80} />
               <span className="terminal-cursor ml-2" />
             </div>
 
