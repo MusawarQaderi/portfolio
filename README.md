@@ -15,7 +15,7 @@
 ---
 
 ## 🔗 Live-Demo
-Besuche die Live-Version hier: [[deine-domain.tld](https://deine-domain.tld)musawarqaderi.com](https://www.musawarqaderi.com/)
+Besuche die Live-Version hier: https://www.musawarqaderi.com/
 
 ---
 
